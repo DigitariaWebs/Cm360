@@ -26,10 +26,11 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="fade-in">
-            <h2 className="text-3xl font-serif font-bold text-darkgreen mb-6 gold-border pb-6">Contactez-nous</h2>
-            <p className="text-gray-600 mb-8">
+            <h2 className="text-3xl font-serif font-bold text-darkgreen mb-4 pb-4">Contactez-nous</h2>
+            <p className="text-gray-600 mb-5 ">
               Nos experts sont à votre disposition pour discuter de vos besoins en gestion de trésorerie et vous proposer des solutions sur mesure.
             </p>
+            <div className="gold-border mb-8"></div>
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1">
@@ -46,7 +47,7 @@ export default function Contact() {
                 </div>
                 <div className="ml-4">
                   <h4 className="font-serif font-medium text-darkgreen">Téléphone</h4>
-                  <p className="text-gray-600">+33 1 40 62 40 00</p>
+                  <p className="text-gray-600">+1 438-521-3151</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -55,7 +56,7 @@ export default function Contact() {
                 </div>
                 <div className="ml-4">
                   <h4 className="font-serif font-medium text-darkgreen">Email</h4>
-                  <p className="text-gray-600">contact@cm360.com</p>
+                  <p className="text-gray-600">info@cabinetcm360.com</p>
                 </div>
               </div>
             </div>
@@ -71,7 +72,34 @@ export default function Contact() {
                   id="name"
                   name="name"
                   required
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-gold focus:border-gold p-3 border"
+                  placeholder="Votre nom complet"
+                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
+                />
+              </div>
+              <div>
+                <label htmlFor="enterprise" className="block text-sm font-medium text-gray-700">
+                  Entreprise
+                </label>
+                <input
+                  type="text"
+                  id="enterprise"
+                  name="enterprise"
+                  required
+                  placeholder="Nom de l'entreprise"
+                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
+                />
+              </div>
+              <div>
+                <label htmlFor="telephone" className="block text-sm font-medium text-gray-700">
+                  Téléphone
+                </label>
+                <input
+                  type="tel"
+                  id="telephone"
+                  name="telephone"
+                  required
+                  placeholder="Votre numéro de téléphone"
+                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
                 />
               </div>
               <div>
@@ -83,18 +111,8 @@ export default function Contact() {
                   id="email"
                   name="email"
                   required
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-gold focus:border-gold p-3 border"
-                />
-              </div>
-              <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700">
-                  Société
-                </label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-gold focus:border-gold p-3 border"
+                  placeholder="Votre adresse email"
+                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
                 />
               </div>
               <div>
@@ -106,7 +124,8 @@ export default function Contact() {
                   name="message"
                   rows={4}
                   required
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-gold focus:border-gold p-3 border"
+                  placeholder="Votre message"
+                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
                 ></textarea>
               </div>
               <div>
