@@ -177,60 +177,65 @@ export default function Services() {
     }
   };
 
-  // Update extendedServices and totalSlides to use itemsPerSlide
-  const totalSlides = Math.ceil(services.length / itemsPerSlide);
+  // Calculate total slides based on itemsPerSlide
+  const totalServices = services.length; // 7 services
+  
+  // Create extended array for infinite loop
   const extendedServices = [
-    ...services.slice(-itemsPerSlide),
-    ...services,
-    ...services.slice(0, itemsPerSlide)
+    ...services.slice(-itemsPerSlide), // Last items at the beginning
+    ...services, // All 7 services
+    ...services.slice(0, itemsPerSlide) // First items at the end
   ];
 
+  // Adjust currentSlide to always be within the correct range
+  useEffect(() => {
+    // Start at the first real service (after the duplicates)
+    setCurrentSlide(itemsPerSlide);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [itemsPerSlide]);
+
+  // Navigation handlers - navigate by individual services
   const nextSlide = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    setCurrentSlide(prev => prev + 1);
+    setCurrentSlide((prev) => prev + 1);
   };
 
   const prevSlide = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    setCurrentSlide(prev => prev - 1);
+    setCurrentSlide((prev) => prev - 1);
   };
 
-  const goToSlide = (index: number) => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setCurrentSlide(index + itemsPerSlide);
-  };
-
-  // Handle infinite loop transitions
+  // Infinite loop effect
   useEffect(() => {
     if (isTransitioning) {
       const timer = setTimeout(() => {
         setIsTransitioning(false);
-        
         // Reset position for infinite loop
-        if (currentSlide >= totalSlides + itemsPerSlide) {
+        if (currentSlide >= totalServices + itemsPerSlide) {
           setCurrentSlide(itemsPerSlide);
         } else if (currentSlide < itemsPerSlide) {
-          setCurrentSlide(totalSlides + itemsPerSlide - 1);
+          setCurrentSlide(totalServices + itemsPerSlide - 1);
         }
       }, 500);
-
       return () => clearTimeout(timer);
     }
-  }, [currentSlide, isTransitioning, totalSlides, itemsPerSlide]);
+  }, [currentSlide, isTransitioning, totalServices, itemsPerSlide]);
 
-  // Initialize slider position
-  useEffect(() => {
-    setCurrentSlide(itemsPerSlide);
-  }, [itemsPerSlide]);
+  // Dots navigation - jump to specific service
+  const goToSlide = (serviceIndex: number) => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentSlide(serviceIndex + itemsPerSlide);
+  };
 
+  // Get the current active service index for dots/counter
   const getDisplayIndex = () => {
     if (currentSlide < itemsPerSlide) {
-      return currentSlide + totalSlides - itemsPerSlide;
-    } else if (currentSlide >= totalSlides + itemsPerSlide) {
-      return currentSlide - totalSlides - itemsPerSlide;
+      return currentSlide + totalServices - itemsPerSlide;
+    } else if (currentSlide >= totalServices + itemsPerSlide) {
+      return currentSlide - totalServices - itemsPerSlide;
     } else {
       return currentSlide - itemsPerSlide;
     }
@@ -248,7 +253,6 @@ export default function Services() {
 
         {/* Slider Container */}
         <div className="relative z-30 pointer-events-auto">
-          {/* Slider Wrapper */}
           <div className="overflow-hidden pointer-events-auto" ref={sliderRef}>
             <div 
               className={`flex ${isTransitioning ? 'transition-transform duration-500 ease-in-out' : ''} pointer-events-auto`}
@@ -259,15 +263,17 @@ export default function Services() {
                   key={`${service.title}-${index}`}
                   className={`flex-shrink-0 px-2 sm:px-4 ${itemsPerSlide === 1 ? 'w-full' : itemsPerSlide === 2 ? 'w-1/2' : 'w-1/3'}`}
                 >
-                  <ServiceCard
-                    title={service.title}
-                    image={service.image}
-                    description={service.description}
-                    details={service.details}
-                    advantages={service.advantages}
-                    index={index}
-                    onOpenModal={handleOpenModal}
-                  />
+                  <MotionWrapper animation="scale" delay={0}>
+                    <ServiceCard
+                      title={service.title}
+                      image={service.image}
+                      description={service.description}
+                      details={service.details}
+                      advantages={service.advantages}
+                      index={index}
+                      onOpenModal={handleOpenModal}
+                    />
+                  </MotionWrapper>
                 </div>
               ))}
             </div>
@@ -295,7 +301,7 @@ export default function Services() {
           </button>
         </div>
 
-        {/* Dots Indicator */}
+        {/* Dots Indicator - 7 dots for 7 services */}
         <div className="flex justify-center mt-8 space-x-2 pointer-events-auto z-30 relative">
           {services.map((_, index) => (
             <button
@@ -314,7 +320,7 @@ export default function Services() {
         {/* Service Counter */}
         <div className="text-center mt-6">
           <p className="text-gray-500 text-sm">
-            Service {getDisplayIndex() + 1} sur {services.length}
+            Service {getDisplayIndex() + 1} sur {totalServices}
           </p>
         </div>
 

@@ -31,7 +31,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         console.log('Card clicked:', title);
         onOpenModal(title);
       }}
-      className="w-full text-left focus:outline-none"
+      className="w-full text-left focus:outline-none cursor-pointer"
     >
       <div 
         className="relative rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 ease-out transform h-96 group overflow-hidden border-4 border-transparent hover:border-[#D4AF37]"

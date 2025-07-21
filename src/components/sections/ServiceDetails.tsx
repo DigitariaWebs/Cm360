@@ -208,8 +208,12 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ isOpen, onClose, servic
         onClick={onClose}
       />
       
-      {/* Modal */}
-      <div
+      {/* Modal with animation */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.95 }}
+        transition={{ duration: 0.25, ease: 'easeOut' }}
         className="relative w-full max-w-2xl sm:max-w-3xl md:max-w-4xl max-h-[95vh] overflow-y-auto bg-white rounded-2xl shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
@@ -308,7 +312,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ isOpen, onClose, servic
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
