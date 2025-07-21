@@ -1,16 +1,12 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 interface ServiceCardProps {
   title: string;
   image: string;
   description: string;
-  url?: string;
-  index: number;
-  details?: string[];
-  advantages?: string[];
   onOpenModal: (title: string) => void;
 }
 
@@ -18,10 +14,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   title, 
   image, 
   description, 
-  url, 
-  index,
-  details,
-  advantages,
   onOpenModal
 }) => {
   return (
@@ -38,9 +30,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       >
         {/* Image Container with overflow hidden and border radius */}
         <div className="absolute inset-0 rounded-2xl overflow-hidden">
-          <img
+          <Image
             src={image}
             alt={title}
+            layout="fill"
+            objectFit="cover"
             className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
             onError={(e) => {
               // Fallback for missing image

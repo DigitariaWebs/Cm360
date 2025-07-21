@@ -34,14 +34,7 @@ const animations = {
   },
   bounce: {
     initial: { opacity: 0, y: 50 },
-    animate: { 
-      opacity: 1, 
-      y: 0,
-      transition: {
-        type: "spring",
-        bounce: 0.4,
-      }
-    },
+    animate: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: 50 }
   }
 };
@@ -53,13 +46,18 @@ export default function MotionWrapper({
   duration = 0.5,
   className = ''
 }: MotionWrapperProps) {
+  // Custom transition for bounce
+  const customTransition = animation === 'bounce'
+    ? { type: 'spring' as const, bounce: 0.4, duration, delay }
+    : { duration, delay };
+
   return (
     <motion.div
       initial="initial"
       whileInView="animate"
       exit="exit"
       variants={animations[animation]}
-      transition={{ duration, delay }}
+      transition={customTransition}
       viewport={{ once: true, margin: "-100px" }}
       className={className}
     >

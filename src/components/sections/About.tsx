@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function About() {
   return (
     <section id="apropos" className="py-20 bg-white">
@@ -50,7 +52,7 @@ export default function About() {
           <div className="relative fade-in">
             <div className="bg-gray-100 p-8 rounded-lg shadow-lg">
               <div className="aspect-w-16 aspect-h-9">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                   alt="Réunion d'entreprise"
                   className="rounded-lg object-cover w-full h-full"

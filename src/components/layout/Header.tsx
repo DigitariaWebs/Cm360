@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -20,7 +21,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 bg-white/80 rounded-full shadow-md backdrop-blur-md flex justify-between items-center">
         <div className="flex-shrink-0 flex items-center">
           <a href="#accueil">
-            <img src="/Logo.png" alt="Cm360 Logo" className="h-16 w-auto" />
+            <Image src="/Logo.png" alt="Cm360 Logo" width={64} height={64} />
           </a>
         </div>
         <div className="hidden md:block">

@@ -2,20 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-
-// Define theme inline since we don't have a separate config
-const theme = {
-  colors: {
-    primary: '#1A3A2F',
-    secondary: '#D4AF37',
-    white: '#ffffff',
-    text: '#374151'
-  },
-  fonts: {
-    heading: 'Playfair Display, serif',
-    body: 'Montserrat, sans-serif'
-  }
-};
+import Image from 'next/image';
 
 interface ServiceDetailsProps {
   isOpen: boolean;
@@ -39,7 +26,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ isOpen, onClose, servic
     if (nav) nav.style.display = 'none';
 
     // Close modal on escape key
-    const handleEscape = (e: KeyboardEvent) => {
+    const handleEscape = (e: KeyboardEvent): void => {
       if (e.key === 'Escape') {
         onClose();
       }
@@ -198,8 +185,6 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ isOpen, onClose, servic
     };
   };
 
-  const enrichment = getServiceEnrichment(service.title);
-
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center p-2 sm:p-4">
       {/* Backdrop */}
@@ -219,10 +204,11 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ isOpen, onClose, servic
       >
         {/* Image Header */}
         <div className="relative h-48 xs:h-56 sm:h-64 md:h-80 rounded-t-2xl overflow-hidden">
-          <img
+          <Image
             src={service.image}
             alt={service.title}
-            className="w-full h-full object-cover"
+            layout="fill"
+            objectFit="cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8">

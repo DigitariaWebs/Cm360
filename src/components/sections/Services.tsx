@@ -191,7 +191,6 @@ export default function Services() {
   useEffect(() => {
     // Start at the first real service (after the duplicates)
     setCurrentSlide(itemsPerSlide);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [itemsPerSlide]);
 
   // Navigation handlers - navigate by individual services
@@ -268,16 +267,13 @@ export default function Services() {
                       title={service.title}
                       image={service.image}
                       description={service.description}
-                      details={service.details}
-                      advantages={service.advantages}
-                      index={index}
                       onOpenModal={handleOpenModal}
                     />
-                  </MotionWrapper>
-                </div>
+        </MotionWrapper>
+              </div>
               ))}
             </div>
-          </div>
+              </div>
 
           {/* Navigation Arrows */}
           <button
@@ -299,7 +295,7 @@ export default function Services() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-        </div>
+              </div>
 
         {/* Dots Indicator - 7 dots for 7 services */}
         <div className="flex justify-center mt-8 space-x-2 pointer-events-auto z-30 relative">
@@ -315,7 +311,7 @@ export default function Services() {
               aria-label={`Aller au service ${index + 1}`}
             />
           ))}
-        </div>
+            </div>
 
         {/* Service Counter */}
         <div className="text-center mt-6">

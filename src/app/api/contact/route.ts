@@ -7,7 +7,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     console.log('Request body received:', JSON.stringify(body, null, 2));
     
-    const { firstName, lastName, email, phone, date, time, guests, specialRequests } = body;
+    const { firstName, lastName, email, phone, specialRequests } = body;
 
     // Validate required fields
     if (!firstName || !email || !phone) {
@@ -44,14 +44,6 @@ export async function POST(request: NextRequest) {
     await transporter.verify();
     console.log('SMTP connection verified successfully');
 
-    // Format the date and time
-    const formattedDate = new Date(date).toLocaleDateString('en-US', {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    });
-
     // Email content
     const mailOptions = {
       from: process.env.SMTP_FROM,
@@ -61,7 +53,6 @@ export async function POST(request: NextRequest) {
         <div style="font-family: 'Georgia', 'Times New Roman', serif; background: #f8f9fa; padding: 0; margin: 0;">
           <div style="max-width: 600px; margin: 40px auto; background: #fff; border-radius: 18px; box-shadow: 0 4px 24px rgba(26,58,47,0.08); overflow: hidden; border: 1px solid #e5e7eb;">
             <div style="background: linear-gradient(90deg, #1A3A2F 60%, #BF9040 100%); padding: 32px 0 24px 0; text-align: center;">
-              <img src="https://cabinetcm360.com/Logo.png" alt="CM360 Logo" style="height: 60px; margin-bottom: 12px;" />
               <h2 style="color: #fff; font-size: 2rem; font-family: 'Georgia', serif; margin: 0; letter-spacing: 1px;">Nouveau message de contact</h2>
             </div>
             <div style="padding: 32px 28px 24px 28px;">

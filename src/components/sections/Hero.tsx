@@ -23,8 +23,8 @@ export default function Hero() {
           </MotionWrapper>
           
           <MotionWrapper animation="fadeIn" delay={0.4}>
-            <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
-              Solutions sur mesure pour une gestion stratégique de votre trésorerie et une maximisation de votre liquidité.
+            <p className="text-lg text-gray-600 mb-8">
+              Optimisez la gestion de votre trésorerie d&#39;entreprise avec notre expertise pointue
             </p>
           </MotionWrapper>
 

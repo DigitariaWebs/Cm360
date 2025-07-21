@@ -16,6 +16,7 @@ function Counter({ end, duration, prefix = '', suffix = '' }: CounterProps) {
   const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
+    const currentCount = countRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -25,13 +26,13 @@ function Counter({ end, duration, prefix = '', suffix = '' }: CounterProps) {
       { threshold: 0.1 }
     );
 
-    if (countRef.current) {
-      observer.observe(countRef.current);
+    if (currentCount) {
+      observer.observe(currentCount);
     }
 
     return () => {
-      if (countRef.current) {
-        observer.unobserve(countRef.current);
+      if (currentCount) {
+        observer.unobserve(currentCount);
       }
     };
   }, []);
@@ -80,7 +81,7 @@ export default function Stats() {
           <MotionWrapper animation="slideUp" delay={0.1}>
             <div>
               <Counter end={12} duration={2} suffix="+" />
-              <div className="text-sm uppercase tracking-wider">Ans d'expérience</div>
+              <div className="text-sm uppercase tracking-wider">Ans d&#39;expérience</div>
             </div>
           </MotionWrapper>
 
