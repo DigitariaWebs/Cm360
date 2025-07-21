@@ -5,7 +5,7 @@ export default function About() {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-serif font-bold text-darkgreen mb-4 gold-border pb-6">À Propos de Nous</h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Fondée en 2010, Stratégie Trésorerie est un cabinet de conseil spécialisé dans l'optimisation de la trésorerie des grandes entreprises et institutions financières.
+            Fondée en 2010, Cm360 est un cabinet de conseil spécialisé dans l'optimisation de la trésorerie des grandes entreprises et institutions financières.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-12 items-center">

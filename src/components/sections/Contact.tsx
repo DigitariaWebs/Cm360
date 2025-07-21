@@ -55,7 +55,7 @@ export default function Contact() {
                 </div>
                 <div className="ml-4">
                   <h4 className="font-serif font-medium text-darkgreen">Email</h4>
-                  <p className="text-gray-600">contact@strategietresorerie.com</p>
+                  <p className="text-gray-600">contact@cm360.com</p>
                 </div>
               </div>
             </div>

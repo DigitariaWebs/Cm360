@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Stratégie Trésorerie | Conseil en Gestion de Trésorerie d\'Entreprise',
-  description: 'Solutions sur mesure pour une gestion stratégique de votre trésorerie et une maximisation de votre liquidité.',
+  title: 'Cm360 | Conseil en Gestion de Trésorerie d\'Entreprise',
+  description: 'Cm360 - Solutions sur mesure pour une gestion stratégique de votre trésorerie et une maximisation de votre liquidité.',
 }
 
 export default function RootLayout({

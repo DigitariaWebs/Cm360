@@ -17,7 +17,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="font-sans text-gray-800 bg-white">
+    <main className="font-sans text-gray-800">
       <Header />
       <Hero />
       <About />

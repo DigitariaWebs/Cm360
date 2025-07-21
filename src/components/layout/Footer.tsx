@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-serif font-bold mb-4">
-              Stratégie<span className="text-gold">Trésorerie</span>
+              Cm360
             </h3>
             <p className="text-gray-300 text-sm">
               Cabinet de conseil spécialisé en optimisation de trésorerie d'entreprise depuis 2010.
@@ -99,7 +99,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400 text-sm">
-          &copy; {new Date().getFullYear()} Stratégie Trésorerie. Tous droits réservés.
+          &copy; {new Date().getFullYear()} Cm360. Tous droits réservés.
         </div>
       </div>
     </footer>

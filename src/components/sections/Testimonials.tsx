@@ -20,7 +20,7 @@ export default function Testimonials() {
               </div>
             </div>
             <p className="text-gray-600 italic">
-              "Stratégie Trésorerie nous a permis de réduire notre BFR de 30 jours grâce à une analyse fine de nos processus et des négociations ciblées avec nos fournisseurs."
+              "Cm360 nous a permis de réduire notre BFR de 30 jours grâce à une analyse fine de nos processus et des négociations ciblées avec nos fournisseurs."
             </p>
           </div>
           <div className="bg-gray-50 p-8 rounded-lg fade-in">
