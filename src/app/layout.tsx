@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Cm360 | Conseil en Gestion de Trésorerie d\'Entreprise',
+  title: 'Cm360 | Conseil en Gestion de Trésorerie d&apos;Entreprise',
   description: 'Cm360 - Solutions sur mesure pour une gestion stratégique de votre trésorerie et une maximisation de votre liquidité.',
 }
 

@@ -9,7 +9,7 @@ export default function Services() {
   const services = [
     {
       title: "Cash Management & TMS",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80",
+      image: "/ServiceSection1.jpg",
       description: "Implémentation et optimisation de systèmes de gestion de trésorerie pour une visibilité et un contrôle parfaits.",
       details: [
         "Sélection et implémentation de TMS",
@@ -27,7 +27,7 @@ export default function Services() {
     },
     {
       title: "Diagnostic de trésorerie",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: "/AboutSection.jpg",
       description: "Analyse approfondie de votre situation de trésorerie avec identification des axes d'amélioration.",
       details: [
         "Audit complet des flux",
@@ -45,7 +45,7 @@ export default function Services() {
     },
     {
       title: "Gestion de liquidité",
-      image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: "/ServiceSection2.jpg",
       description: "Optimisation des placements et de la gestion des excédents de trésorerie pour maximiser les rendements.",
       details: [
         "Stratégie de placement",
@@ -63,7 +63,7 @@ export default function Services() {
     },
     {
       title: "Relation et entente client",
-      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
+      image: "/ServiceSection3.jpg",
       description: "Négociation et optimisation des relations bancaires pour obtenir les meilleures conditions.",
       details: [
         "Audit des relations bancaires",
@@ -81,7 +81,7 @@ export default function Services() {
     },
     {
       title: "Appel d'offres",
-      image: "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80",
+      image: "/ServiceSection4.jpg",
       description: "Gestion complète d'appels d'offres bancaires pour optimiser vos conditions de financement.",
       details: [
         "Préparation du cahier des charges",
@@ -99,7 +99,7 @@ export default function Services() {
     },
     {
       title: "Économie d'argent",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2026&q=80",
+      image: "/ServiceSection5.jpg",
       description: "Identification et mise en œuvre de stratégies d'économies sur vos coûts financiers.",
       details: [
         "Audit des coûts financiers",
@@ -117,7 +117,7 @@ export default function Services() {
     },
     {
       title: "Amélioration des processus",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
+      image: "/ServiceSection6.jpg",
       description: "Optimisation et automatisation des processus financiers pour une efficacité maximale.",
       details: [
         "Cartographie des processus",

@@ -7,14 +7,14 @@ export default function About() {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-serif font-bold text-darkgreen mb-4 gold-border pb-6">À Propos de Nous</h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Fondée en 2010, Cm360 est un cabinet de conseil spécialisé dans l'optimisation de la trésorerie des grandes entreprises et institutions financières.
+            Fondée en 2010, Cm360 est un cabinet de conseil spécialisé dans l&apos;optimisation de la trésorerie des grandes entreprises et institutions financières.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="fade-in">
             <h3 className="text-2xl font-serif font-semibold text-darkgreen mb-4">Notre Expertise</h3>
             <p className="text-gray-600 mb-6">
-              Avec plus de 12 ans d'expérience, notre équipe d'experts accompagne les directions financières dans l'optimisation de leur gestion de trésorerie, la réduction des coûts financiers et l'amélioration de la performance globale.
+              Avec plus de 12 ans d&apos;expérience, notre équipe d&apos;experts accompagne les directions financières dans l&apos;optimisation de leur gestion de trésorerie, la réduction des coûts financiers et l&apos;amélioration de la performance globale.
             </p>
             <div className="space-y-4">
               <div className="flex items-start">
@@ -53,8 +53,10 @@ export default function About() {
             <div className="bg-gray-100 p-8 rounded-lg shadow-lg">
               <div className="aspect-w-16 aspect-h-9">
                 <Image
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  src="/AboutSection.jpg"
                   alt="Réunion d'entreprise"
+                  width={800}
+                  height={600}
                   className="rounded-lg object-cover w-full h-full"
                 />
               </div>
