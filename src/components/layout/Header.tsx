@@ -71,34 +71,34 @@ export default function Header() {
       {/* Mobile menu */}
       <div
         id="mobile-menu"
-        className={`md:hidden${isMobileMenuOpen ? '' : ' hidden'} bg-white shadow-lg rounded-xl px-4 py-2 mt-2 absolute left-1/2 -translate-x-1/2 z-30`}
-        style={{ minWidth: '220px' }}
+        className={`md:hidden${isMobileMenuOpen ? '' : ' hidden'} bg-white shadow-lg rounded-xl px-4 py-2 mt-2 absolute left-1/2 -translate-x-1/2 z-30 w-full max-w-md`}
+        style={{ minWidth: '320px' }}
       >
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center justify-center">
           <a
             href="#accueil"
-            className="block px-3 py-2 text-darkgreen hover:text-gold"
+            className="block px-3 py-2 text-darkgreen hover:text-gold text-center"
             onClick={e => handleNavClick(e, '#accueil')}
           >
             Accueil
           </a>
           <a
             href="#apropos"
-            className="block px-3 py-2 text-darkgreen hover:text-gold"
+            className="block px-3 py-2 text-darkgreen hover:text-gold text-center"
             onClick={e => handleNavClick(e, '#apropos')}
           >
             À Propos
           </a>
           <a
             href="#services"
-            className="block px-3 py-2 text-darkgreen hover:text-gold"
+            className="block px-3 py-2 text-darkgreen hover:text-gold text-center"
             onClick={e => handleNavClick(e, '#services')}
           >
             Services
           </a>
           <a
             href="#contact"
-            className="block px-3 py-2 text-darkgreen hover:text-gold"
+            className="block px-3 py-2 text-darkgreen hover:text-gold text-center"
             onClick={e => handleNavClick(e, '#contact')}
           >
             Contact

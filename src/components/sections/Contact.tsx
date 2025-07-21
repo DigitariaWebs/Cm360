@@ -1,24 +1,79 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useLayoutEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Contact() {
   const [formSuccess, setFormSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
+  const [formHeight, setFormHeight] = useState<number | undefined>(undefined);
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    
-    // Simulate form submission
-    setTimeout(() => {
-      const form = e.target as HTMLFormElement;
-      form.reset();
-      setFormSuccess(true);
+  useLayoutEffect(() => {
+    if (!formSuccess && formRef.current) {
+      setFormHeight(formRef.current.offsetHeight);
+    }
+  }, [formSuccess, error]);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    try {
+      e.preventDefault();
+      console.log('Form submission started');
       
-      // Hide success message after 5 seconds
-      setTimeout(() => {
-        setFormSuccess(false);
-      }, 5000);
-    }, 1000);
+      setIsSubmitting(true);
+      setError('');
+      
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
+      
+      console.log('Form data extracted');
+      
+      // Extract form data and map to API expected format
+      const name = formData.get('name')?.toString() || '';
+      const nameParts = name.split(' ');
+      
+      const data = {
+        firstName: nameParts[0] || '',
+        lastName: nameParts.slice(1).join(' ') || nameParts[0] || '', // Use first name as last name if only one name provided
+        email: formData.get('email')?.toString() || '',
+        phone: formData.get('telephone')?.toString() || '',
+        date: new Date().toISOString().split('T')[0], // Today's date as placeholder
+        time: '12:00', // Default time as placeholder
+        guests: '1', // Default guests as placeholder
+        specialRequests: `Entreprise: ${formData.get('enterprise')} | Message: ${formData.get('message')}`
+      };
+
+      console.log('Submitting form data:', data);
+      
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      console.log('Response received:', response.status);
+      
+      const result = await response.json();
+      console.log('API response:', result);
+
+      if (response.ok) {
+        console.log('Form submitted successfully');
+        form.reset();
+        setFormSuccess(true);
+        setTimeout(() => setFormSuccess(false), 5000);
+      } else {
+        console.error('API error:', result);
+        setError(result.error || 'Une erreur est survenue');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setError(`Erreur: ${error instanceof Error ? error.message : 'Erreur inconnue'}`);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -38,7 +93,14 @@ export default function Contact() {
                 </div>
                 <div className="ml-4">
                   <h4 className="font-serif font-medium text-darkgreen">Adresse</h4>
-                  <p className="text-gray-600">25 Avenue Montaigne<br />75008 Paris, France</p>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=25+Avenue+Montaigne+75008+Paris+France"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-gold transition"
+                  >
+                    25 Avenue Montaigne<br />75008 Paris, France
+                  </a>
                 </div>
               </div>
               <div className="flex items-start">
@@ -47,7 +109,12 @@ export default function Contact() {
                 </div>
                 <div className="ml-4">
                   <h4 className="font-serif font-medium text-darkgreen">Téléphone</h4>
-                  <p className="text-gray-600">+1 438-521-3151</p>
+                  <a
+                    href="tel:+14385213151"
+                    className="text-gray-600 hover:text-gold transition"
+                  >
+                    +1 438-521-3151
+                  </a>
                 </div>
               </div>
               <div className="flex items-start">
@@ -56,92 +123,135 @@ export default function Contact() {
                 </div>
                 <div className="ml-4">
                   <h4 className="font-serif font-medium text-darkgreen">Email</h4>
-                  <p className="text-gray-600">info@cabinetcm360.com</p>
+                  <a
+                    href="mailto:info@cabinetcm360.com"
+                    className="text-gray-600 hover:text-gold transition"
+                  >
+                    info@cabinetcm360.com
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           <div className="bg-white p-8 rounded-lg shadow-lg fade-in">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                  Nom complet
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  placeholder="Votre nom complet"
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
-                />
-              </div>
-              <div>
-                <label htmlFor="enterprise" className="block text-sm font-medium text-gray-700">
-                  Entreprise
-                </label>
-                <input
-                  type="text"
-                  id="enterprise"
-                  name="enterprise"
-                  required
-                  placeholder="Nom de l'entreprise"
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
-                />
-              </div>
-              <div>
-                <label htmlFor="telephone" className="block text-sm font-medium text-gray-700">
-                  Téléphone
-                </label>
-                <input
-                  type="tel"
-                  id="telephone"
-                  name="telephone"
-                  required
-                  placeholder="Votre numéro de téléphone"
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  placeholder="Votre adresse email"
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  required
-                  placeholder="Votre message"
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
-                ></textarea>
-              </div>
-              <div>
-                <button
-                  type="submit"
-                  className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-darkgreen hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gold transition duration-300"
+            <div className="relative" style={{ minHeight: formHeight ? `${formHeight}px` : undefined }}>
+              <AnimatePresence mode="wait">
+                {!formSuccess ? (
+                  <motion.form
+                    key="form"
+                    ref={formRef}
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: 50 }}
+                    transition={{ duration: 0.5 }}
+                    onSubmit={handleSubmit}
+                    className="space-y-6"
+                  >
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                        Nom complet
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        placeholder="Votre nom complet"
+                        className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="enterprise" className="block text-sm font-medium text-gray-700">
+                        Entreprise
+                      </label>
+                      <input
+                        type="text"
+                        id="enterprise"
+                        name="enterprise"
+                        required
+                        placeholder="Nom de l'entreprise"
+                        className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="telephone" className="block text-sm font-medium text-gray-700">
+                        Téléphone
+                      </label>
+                      <input
+                        type="tel"
+                        id="telephone"
+                        name="telephone"
+                        required
+                        placeholder="Votre numéro de téléphone"
+                        className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="Votre adresse email"
+                        className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                        Message
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        rows={4}
+                        required
+                        placeholder="Votre message"
+                        className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
+                      ></textarea>
+                    </div>
+                    <div>
+                      <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-darkgreen hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gold transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
+                      </button>
+                    </div>
+                  </motion.form>
+                ) : (
+                  <motion.div
+                    key="feedback"
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -50 }}
+                    transition={{ duration: 0.5 }}
+                    className="absolute inset-0 flex flex-col justify-center items-center"
+                    style={{ height: formHeight ? `${formHeight}px` : undefined }}
+                  >
+                    <div className="mt-6 p-5 bg-white border-l-4 border-gold rounded-lg shadow text-darkgreen font-serif text-lg flex items-center gap-3">
+                      <svg className="w-7 h-7 text-gold flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                      <span>Merci pour votre message ! Nous vous contacterons rapidement.</span>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+              {error && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.4 }}
+                  className="mt-6 p-5 bg-white border-l-4 border-red-400 rounded-lg shadow text-red-700 font-serif text-lg flex items-center gap-3"
                 >
-                  Envoyer le message
-                </button>
-              </div>
-            </form>
-            {formSuccess && (
-              <div className="mt-4 p-4 bg-green-50 text-green-800 rounded">
-                Votre message a bien été envoyé. Nous vous contacterons rapidement.
-              </div>
-            )}
+                  <svg className="w-7 h-7 text-red-400 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                  <span>{error}</span>
+                </motion.div>
+              )}
+            </div>
           </div>
         </div>
       </div>
