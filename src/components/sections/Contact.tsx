@@ -82,8 +82,9 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="fade-in">
             <h2 className="text-3xl font-serif font-bold text-darkgreen mb-4 pb-4">Contactez-nous</h2>
-            <p className="text-gray-600 mb-5 ">
-              Nos experts sont à votre disposition pour discuter de vos besoins en gestion de trésorerie et vous proposer des solutions sur mesure.
+            <p className="text-gray-600 mb-5">
+              Nous sommes à votre disposition pour discuter de vos besoins en gestion de trésorerie et vous
+              proposer des solutions sur mesure.
             </p>
             <div className="gold-border mb-8"></div>
             <div className="space-y-6">

@@ -9,7 +9,7 @@ export default function Services() {
   const services = [
     {
       title: "Cash Management & TMS",
-      image: "/ServiceSection1.jpg",
+      image: "/CashManagementTMS.jpg",
       description: "Implémentation et optimisation de systèmes de gestion de trésorerie pour une visibilité et un contrôle parfaits.",
       details: [
         "Sélection et implémentation de TMS",
@@ -26,44 +26,49 @@ export default function Services() {
       ]
     },
     {
-      title: "Diagnostic de trésorerie",
-      image: "/AboutSection.jpg",
-      description: "Analyse approfondie de votre situation de trésorerie avec identification des axes d'amélioration.",
+      title: "Diagnostique de Trésorerie",
+      image: "/DiagnostiqueTrésorerie.png",
+      description: "Diagnostique de trésorerie approfondis, analyse de l&apos;ensemble de vos opérations pour identifier les inefficacités et les possibilités d&apos;amélioration.",
       details: [
-        "Audit complet des flux",
-        "Benchmark sectoriel", 
-        "Plan d'action personnalisé",
-        "Analyse des risques",
-        "Recommandations stratégiques"
+        "Diagnostique des payables",
+        "Diagnostique des recevables",
+        "Diagnostique structures de comptes et rendement des excédents",
+        "Diagnostique des opérations et processus",
+        "Diagnostique des frais et relations bancaires",
+        "Cartographie des recevables, payables et système de gestion",
+        "Analyse des risques"
       ],
       advantages: [
-        "Vision claire de votre situation",
-        "Identification d'économies potentielles",
-        "Stratégie personnalisée",
-        "Support expert"
+        "Vision claire de votre gestion de trésorerie",
+        "Identification d&apos;économies potentielles",
+        "Identification des zones d&apos;inefficiences",
+        "Identification d&apos;opportunités d&apos;automatisation et d&apos;amélioration de processus",
+        "Identification d&apos;opportunités pour optimisation de liquidités et de coûts",
+        "Identification du risque financier, sécuritaire, réglementaire, etc."
       ]
     },
     {
       title: "Gestion de liquidité",
-      image: "/ServiceSection2.jpg",
-      description: "Optimisation des placements et de la gestion des excédents de trésorerie pour maximiser les rendements.",
+      image: "/GestionLiquidite.png",
+      description: "Solutions personnalisées pour optimiser la prévision de trésorerie et la gestion de la liquidité, en guidant nos clients dans le choix et le déploiement des outils les plus adaptés afin d'assurer une position de liquidité solide.",
       details: [
-        "Stratégie de placement",
-        "Gestion des excédents",
-        "Diversification des risques",
-        "Monitoring des performances",
-        "Reporting détaillé"
+        "Optimisation des payables",
+        "Optimisation des recevables",
+        "Optimisation des processus et structure de compte",
+        "Optimisation d&apos;accès aux rapports détaillés",
+        "Stratégie de placement des excédents"
       ],
       advantages: [
-        "Maximisation des rendements",
-        "Réduction des risques",
-        "Liquidité optimisée",
-        "Transparence totale"
+        "Identification des solutions personnalisées rapides et sécuritaires pour les paiements et recevables",
+        "Consolidation des méthodes de paiements",
+        "Restructuration des comptes bancaires et accroissement de visibilité de la position financière quotidienne",
+        "Maximisation des rendements des excédents",
+        "Meilleur contrôle interne des opérations et équipes"
       ]
     },
     {
       title: "Relation et entente client",
-      image: "/ServiceSection3.jpg",
+      image: "/RelationEntenteClient.jpg",
       description: "Négociation et optimisation des relations bancaires pour obtenir les meilleures conditions.",
       details: [
         "Audit des relations bancaires",
@@ -81,25 +86,27 @@ export default function Services() {
     },
     {
       title: "Appel d'offres",
-      image: "/ServiceSection4.jpg",
-      description: "Gestion complète d'appels d'offres bancaires pour optimiser vos conditions de financement.",
+      image: "/AppelOffres.png",
+      description: "Expertise spécialisée pour accompagner les entreprises dans la rédaction d&apos;appels d&apos;offres pour les services bancaires et pour soutenir les équipes de gestion de trésorerie des institutions financières dans l&apos;élaboration des réponses aux appels d&apos;offres.",
       details: [
+        "Diagnostique et cartographie des services actuels",
+        "Identification des besoins exacts de l&apos;entreprise",
+        "Cartographie de la structure et identification des services futurs de la gestion de trésorerie",
+        "Établissement des critères d&apos;évaluation des réponses des appels d&apos;offres",
         "Préparation du cahier des charges",
-        "Gestion du processus d'appel d'offres",
-        "Analyse comparative des offres",
-        "Négociation finale",
-        "Accompagnement transition"
+        "Accompagnement des institutions financières pour l&apos;élaboration des réponses aux appels d&apos;offres"
       ],
       advantages: [
-        "Processus structuré",
-        "Conditions optimisées",
-        "Transparence totale",
-        "Expertise dédiée"
+        "Processus structure",
+        "Gain de temps",
+        "Allocation efficiente de vos ressources humaines",
+        "Charge de projet dédié",
+        "Identifier les meilleurs services à implémenter en tirant avantage de notre connaissance approfondie des services bancaires offerts par les banques"
       ]
     },
     {
       title: "Économie d'argent",
-      image: "/ServiceSection5.jpg",
+      image: "/EconomieArgent.jpg",
       description: "Identification et mise en œuvre de stratégies d'économies sur vos coûts financiers.",
       details: [
         "Audit des coûts financiers",
@@ -117,7 +124,7 @@ export default function Services() {
     },
     {
       title: "Amélioration des processus",
-      image: "/ServiceSection6.jpg",
+      image: "/AméliorationProcessus.jpg",
       description: "Optimisation et automatisation des processus financiers pour une efficacité maximale.",
       details: [
         "Cartographie des processus",
@@ -131,6 +138,59 @@ export default function Services() {
         "Réduction des erreurs",
         "Gain de temps",
         "Processus standardisés"
+      ]
+    },
+    {
+      title: "Optimisation des coûts",
+      image: "/OptimisationCouts.jpg",
+      description: "Forts de notre expérience approfondie des banques et de leurs modèles de tarification, nous vous aidons à diminuer vos frais bancaires, à optimiser vos revenus d&apos;intérêts et à simplifier la gestion de votre trésorerie.",
+      details: [
+        "Optimisation des frais",
+        "Optimisation des systèmes",
+        "Optimisation des processus opérationnels"
+      ],
+      advantages: [
+        "Révision des ententes bancaires et frais de services plus avantageux",
+        "Consolidation des comptes et relations bancaires",
+        "Automatisation des payables et recevables",
+        "Optimisation du système de gestion de trésorerie",
+        "Automatisation et réduction des opérations manuelles et répétitives",
+        "Réduction du risque"
+      ]
+    },
+    {
+      title: "Services administratifs",
+      image: "/ServicesAdministratifs.png",
+      description: "Soutien administratif pour les petites et moyennes entreprises; ainsi que les OBNL",
+      details: [
+        "Tenue de livres",
+        "Comptabilité",
+        "Optimisation de la gestion des employés",
+        "Intégration de solutions de paiements en ligne",
+        "Organisation d&apos;entreprise",
+        "Personnalisation de la communication"
+      ],
+      advantages: [
+        "Gain de temps",
+        "Reduction des coûts et meilleure allocation des ressources",
+        "Fluidification des flux de trésorerie",
+        "Meilleur suivi des données comptables et financières"
+      ]
+    },
+    {
+      title: "Support Client",
+      image: "/SupportClient.jpg",
+      description: "Sessions de formation dédiées à l&apos;introduction à la gestion de trésorerie et au partage de bonnes pratiques, tout en offrant un soutien régulier à nos clients.",
+      details: [
+        "Formation des nouveaux employés en ce qui concerne les produits et services de gestion de trésorerie",
+        "Séance de partage de bonnes pratiques en gestion de trésorerie",
+        "Support a la sélection et implémentation d&apos;un système de gestion de trésorerie"
+      ],
+      advantages: [
+        "Gain de temps",
+        "Employés mieux outilles en gestion de trésorerie",
+        "Gain d&apos;efficience grâce à l&apos;allocation des employés a d&apos;autres taches",
+        "Reduction du risque d'erreur dans les opérations globales"
       ]
     }
   ];
