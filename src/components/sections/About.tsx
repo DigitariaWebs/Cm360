@@ -6,7 +6,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-serif font-bold text-darkgreen mb-4 gold-border pb-6">À Propos de Nous</h2>
-          <div className="text-gray-600 max-w-4xl mx-auto space-y-2">
+          <div className="text-gray-600 max-w-4xl mx-auto space-y-0.5">
             <p>
               CM360 est un cabinet de conseil expert en optimisation de la gestion de trésorerie, s&apos;adressant
               aux petites, moyennes et grandes entreprises, ainsi qu&apos;aux organisations paragouvernementales et
@@ -21,7 +21,7 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="fade-in">
             <h3 className="text-2xl font-serif font-semibold text-darkgreen mb-4">Notre Expertise</h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-6 text-justify">
               Forte de près de 15 ans d&apos;expérience cumulée en gestion de trésorerie en entreprise, notre
               équipe d&apos;experts vous accompagne dans l&apos;optimisation de vos pratiques de gestion de
               trésorerie grâce à une approche d&apos;analyse à 360 degrés. Celle-ci couvre notamment les volets

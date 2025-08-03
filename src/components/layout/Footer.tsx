@@ -16,8 +16,15 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-serif font-bold mb-4 flex items-center gap-3">
-              <Image src="/Logo.png" alt="CM360 Logo" className="h-10 w-auto" width={40} height={40} />
-              Cm360
+              <Image 
+                src="/Logo.png" 
+                alt="CM360 Logo" 
+                className="h-16 w-auto invert brightness-0 contrast-200" 
+                width={56} 
+                height={56} 
+                quality={100}
+                style={{ imageRendering: 'crisp-edges' }}
+              />
             </h3>
             <p className="text-gray-300 text-sm">
               Cabinet de conseil spécialisé en optimisation de trésorerie d&#39;entreprise depuis 2010.

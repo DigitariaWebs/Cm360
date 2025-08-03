@@ -7,7 +7,6 @@ import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
 import Services from '@/components/sections/Services';
 import Stats from '@/components/sections/Stats';
-import Testimonials from '@/components/sections/Testimonials';
 import Contact from '@/components/sections/Contact';
 import { initFadeInObserver } from './utils/fadeInObserver';
 
@@ -23,7 +22,7 @@ export default function Home() {
       <About />
       <Services />
       <Stats />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact />
       <Footer />
     </main>

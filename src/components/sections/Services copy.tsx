@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import MotionWrapper from '../animations/MotionWrapper';
 import ServiceCard from './ServiceCard';
 import ServiceDetails from './ServiceDetails';
@@ -10,7 +10,7 @@ export default function Services() {
     {
       title: "Diagnostique de Trésorerie",
       image: "/DiagnostiqueTrésorerie.png",
-      description: "Diagnostique de trésorerie approfondis, analyse de l'ensemble de vos opérations pour identifier les inefficacités et les possibilités d'amélioration.",
+      description: "Diagnostique de trésorerie approfondis, analyse de l&apos;ensemble de vos opérations pour identifier les inefficacités et les possibilités d&apos;amélioration.",
       details: [
         "Diagnostique des payables",
         "Diagnostique des recevables",
@@ -22,10 +22,10 @@ export default function Services() {
       ],
       advantages: [
         "Vision claire de votre gestion de trésorerie",
-        "Identification d'économies potentielles",
-        "Identification des zones d'inefficiences",
-        "Identification d'opportunités d'automatisation et d'amélioration de processus",
-        "Identification d'opportunités pour optimisation de liquidités et de coûts",
+        "Identification d&apos;économies potentielles",
+        "Identification des zones d&apos;inefficiences",
+        "Identification d&apos;opportunités d&apos;automatisation et d&apos;amélioration de processus",
+        "Identification d&apos;opportunités pour optimisation de liquidités et de coûts",
         "Identification du risque financier, sécuritaire, réglementaire, etc."
       ]
     },
@@ -37,7 +37,7 @@ export default function Services() {
         "Optimisation des payables",
         "Optimisation des recevables",
         "Optimisation des processus et structure de compte",
-        "Optimisation d'accès aux rapports détaillés",
+        "Optimisation d&apos;accès aux rapports détaillés",
         "Stratégie de placement des excédents"
       ],
       advantages: [
@@ -51,7 +51,7 @@ export default function Services() {
     {
       title: "Optimisation des coûts",
       image: "/OptimisationCouts.jpg",
-      description: "Forts de notre expérience approfondie des banques et de leurs modèles de tarification, nous vous aidons à diminuer vos frais bancaires, à optimiser vos revenus d'intérêts et à simplifier la gestion de votre trésorerie.",
+      description: "Forts de notre expérience approfondie des banques et de leurs modèles de tarification, nous vous aidons à diminuer vos frais bancaires, à optimiser vos revenus d&apos;intérêts et à simplifier la gestion de votre trésorerie.",
       details: [
         "Optimisation des frais",
         "Optimisation des systèmes",
@@ -95,7 +95,7 @@ export default function Services() {
         "Comptabilité",
         "Optimisation de la gestion des employés",
         "Intégration de solutions de paiements en ligne",
-        "Organisation d'entreprise",
+        "Organisation d&apos;entreprise",
         "Personnalisation de la communication"
       ],
       advantages: [
@@ -108,16 +108,16 @@ export default function Services() {
     {
       title: "Support Client",
       image: "/SupportClient.jpg",
-      description: "Sessions de formation dédiées à l'introduction à la gestion de trésorerie et au partage de bonnes pratiques, tout en offrant un soutien régulier à nos clients.",
+      description: "Sessions de formation dédiées à l&apos;introduction à la gestion de trésorerie et au partage de bonnes pratiques, tout en offrant un soutien régulier à nos clients.",
       details: [
         "Formation des nouveaux employés en ce qui concerne les produits et services de gestion de trésorerie",
         "Séance de partage de bonnes pratiques en gestion de trésorerie",
-        "Support à la sélection et implémentation d'un système de gestion de trésorerie"
+        "Support a la sélection et implémentation d&apos;un système de gestion de trésorerie"
       ],
       advantages: [
         "Gain de temps",
-        "Employés mieux outillés en gestion de trésorerie",
-        "Gain d'efficience grâce à l'allocation des employés à d'autres tâches",
+        "Employés mieux outilles en gestion de trésorerie",
+        "Gain d&apos;efficience grâce à l&apos;allocation des employés a d&apos;autres taches",
         "Reduction du risque d'erreur dans les opérations globales"
       ]
     },
@@ -140,7 +140,27 @@ export default function Services() {
     }
   ];
 
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const [activeModal, setActiveModal] = useState<string | null>(null);
+  const [itemsPerSlide, setItemsPerSlide] = useState(3);
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  // Responsive items per slide
+  useEffect(() => {
+    function updateItemsPerSlide() {
+      if (window.innerWidth < 640) {
+        setItemsPerSlide(1);
+      } else if (window.innerWidth < 1024) {
+        setItemsPerSlide(2);
+      } else {
+        setItemsPerSlide(3);
+      }
+    }
+    updateItemsPerSlide();
+    window.addEventListener('resize', updateItemsPerSlide);
+    return () => window.removeEventListener('resize', updateItemsPerSlide);
+  }, []);
 
   const handleOpenModal = (serviceTitle: string) => {
     console.log('Opening modal for:', serviceTitle);
@@ -162,6 +182,69 @@ export default function Services() {
     }
   };
 
+  // Calculate total slides based on itemsPerSlide
+  const totalServices = services.length; // 7 services
+  
+  // Create extended array for infinite loop
+  const extendedServices = [
+    ...services.slice(-itemsPerSlide), // Last items at the beginning
+    ...services, // All 7 services
+    ...services.slice(0, itemsPerSlide) // First items at the end
+  ];
+
+  // Adjust currentSlide to always be within the correct range
+  useEffect(() => {
+    // Start at the first real service (after the duplicates)
+    setCurrentSlide(itemsPerSlide);
+  }, [itemsPerSlide]);
+
+  // Navigation handlers - navigate by individual services
+  const nextSlide = () => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentSlide((prev) => prev + 1);
+  };
+
+  const prevSlide = () => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentSlide((prev) => prev - 1);
+  };
+
+  // Infinite loop effect
+  useEffect(() => {
+    if (isTransitioning) {
+      const timer = setTimeout(() => {
+        setIsTransitioning(false);
+        // Reset position for infinite loop
+        if (currentSlide >= totalServices + itemsPerSlide) {
+          setCurrentSlide(itemsPerSlide);
+        } else if (currentSlide < itemsPerSlide) {
+          setCurrentSlide(totalServices + itemsPerSlide - 1);
+        }
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [currentSlide, isTransitioning, totalServices, itemsPerSlide]);
+
+  // Dots navigation - jump to specific service
+  const goToSlide = (serviceIndex: number) => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentSlide(serviceIndex + itemsPerSlide);
+  };
+
+  // Get the current active service index for dots/counter
+  const getDisplayIndex = () => {
+    if (currentSlide < itemsPerSlide) {
+      return currentSlide + totalServices - itemsPerSlide;
+    } else if (currentSlide >= totalServices + itemsPerSlide) {
+      return currentSlide - totalServices - itemsPerSlide;
+    } else {
+      return currentSlide - itemsPerSlide;
+    }
+  };
+
   return (
     <section id="services" className="py-20 bg-gray-50 relative z-10 pointer-events-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 pointer-events-auto">
@@ -172,20 +255,74 @@ export default function Services() {
             </p>
           </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <div key={service.title} className="w-full">
-              <MotionWrapper animation="scale" delay={index * 0.1}>
-                <ServiceCard
-                  title={service.title}
-                  image={service.image}
-                  description={service.description}
-                  onOpenModal={handleOpenModal}
-                />
-              </MotionWrapper>
+        {/* Slider Container */}
+        <div className="relative z-30 pointer-events-auto">
+          <div className="overflow-hidden pointer-events-auto" ref={sliderRef}>
+            <div 
+              className={`flex ${isTransitioning ? 'transition-transform duration-500 ease-in-out' : ''} pointer-events-auto`}
+              style={{ transform: `translateX(-${currentSlide * (100 / itemsPerSlide)}%)` }}
+            >
+              {extendedServices.map((service, index) => (
+                <div
+                  key={`${service.title}-${index}`}
+                  className={`flex-shrink-0 px-2 sm:px-4 ${itemsPerSlide === 1 ? 'w-full' : itemsPerSlide === 2 ? 'w-1/2' : 'w-1/3'}`}
+                >
+                  <MotionWrapper animation="scale" delay={0}>
+                    <ServiceCard
+                      title={service.title}
+                      image={service.image}
+                      description={service.description}
+                      onOpenModal={handleOpenModal}
+                    />
+        </MotionWrapper>
+              </div>
+              ))}
             </div>
+              </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white shadow-lg rounded-full w-12 h-12 flex items-center justify-center text-darkgreen hover:bg-darkgreen hover:text-white transition-all duration-300 z-40 cursor-pointer pointer-events-auto"
+            aria-label="Service précédent"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <button
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white shadow-lg rounded-full w-12 h-12 flex items-center justify-center text-darkgreen hover:bg-darkgreen hover:text-white transition-all duration-300 z-40 cursor-pointer pointer-events-auto"
+            aria-label="Service suivant"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+              </div>
+
+        {/* Dots Indicator - 7 dots for 7 services */}
+        <div className="flex justify-center mt-8 space-x-2 pointer-events-auto z-30 relative">
+          {services.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 pointer-events-auto ${
+                getDisplayIndex() === index
+                  ? 'bg-darkgreen scale-125' 
+                  : 'bg-gray-300 hover:bg-gray-400'
+              }`}
+              aria-label={`Aller au service ${index + 1}`}
+            />
           ))}
+            </div>
+
+        {/* Service Counter */}
+        <div className="text-center mt-6">
+          <p className="text-gray-500 text-sm">
+            Service {getDisplayIndex() + 1} sur {totalServices}
+          </p>
         </div>
 
         <MotionWrapper animation="slideUp" delay={0.8}>

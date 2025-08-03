@@ -90,18 +90,16 @@ export default function Contact() {
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mt-1">
-                  <i className="fas fa-map-marker-alt text-gold text-xl"></i>
+                  <i className="fas fa-globe text-gold text-xl"></i>
                 </div>
                 <div className="ml-4">
-                  <h4 className="font-serif font-medium text-darkgreen">Adresse</h4>
-                  <a
-                    href="https://www.google.com/maps/search/?api=1&query=25+Avenue+Montaigne+75008+Paris+France"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-gold transition"
-                  >
-                    25 Avenue Montaigne<br />75008 Paris, France
-                  </a>
+                  <h4 className="font-serif font-medium text-darkgreen">Régions desservies</h4>
+                  <div className="text-gray-600">
+                    Amérique du Nord<br />
+                    Afrique<br />
+                    Caraïbes<br />
+                    Europe
+                  </div>
                 </div>
               </div>
               <div className="flex items-start">
