@@ -1,23 +1,23 @@
 @import "tailwindcss";
 
-:root {
+@theme {
   --color-gold: #D4AF37;
   --color-darkgreen: #1A3A2F;
-  --font-family-serif: var(--font-playfair);
-    --font-family-sans: var(--font-montserrat);
-  }
+  --font-family-playfair: 'Playfair Display', serif;
+  --font-family-montserrat: 'Montserrat', sans-serif;
+}
   
-  body {
-    font-family: var(--font-montserrat);
-  }
+body {
+  font-family: var(--font-family-montserrat);
+}
   
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-playfair);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-playfair);
 }
 
 .hero-gradient {
