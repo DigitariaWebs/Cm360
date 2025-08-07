@@ -80,7 +80,7 @@ export default function Stats() {
         <div className="grid md:grid-cols-4 gap-8 text-center">
           <MotionWrapper animation="slideUp" delay={0.1}>
             <div>
-              <Counter end={12} duration={2} suffix="+" />
+              <Counter end={15} duration={2} suffix="+" />
               <div className="text-sm uppercase tracking-wider">Ans d&#39;expérience</div>
             </div>
           </MotionWrapper>

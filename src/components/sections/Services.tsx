@@ -10,11 +10,11 @@ export default function Services() {
     {
       title: "Diagnostique de Trésorerie",
       image: "/DiagnostiqueTrésorerie.png",
-      description: "Diagnostique de trésorerie approfondis, analyse de l'ensemble de vos opérations pour identifier les inefficacités et les possibilités d'amélioration.",
+      description: "Diagnostique de trésorerie approfondi, analyse de l'ensemble de vos opérations pour identifier les inefficacités et les possibilités d'amélioration.",
       details: [
         "Diagnostique des payables",
         "Diagnostique des recevables",
-        "Diagnostique structures de comptes et rendement des excédents",
+        "Diagnostique de la structure des comptes et rendement des excédents",
         "Diagnostique des opérations et processus",
         "Diagnostique des frais et relations bancaires",
         "Cartographie des recevables, payables et système de gestion",
@@ -68,7 +68,7 @@ export default function Services() {
     },
     {
       title: "Appel d'offres",
-      image: "/AppelOffres.png",
+      image: "/AppelOffres.jpg",
       description: "Expertise spécialisée pour accompagner les entreprises dans la rédaction d'appels d'offres pour les services bancaires et pour soutenir les équipes de gestion de trésorerie des institutions financières dans l'élaboration des réponses aux appels d'offres.",
       details: [
         "Diagnostique et cartographie des services actuels",
@@ -112,19 +112,19 @@ export default function Services() {
       details: [
         "Formation des nouveaux employés en ce qui concerne les produits et services de gestion de trésorerie",
         "Séance de partage de bonnes pratiques en gestion de trésorerie",
-        "Support à la sélection et implémentation d'un système de gestion de trésorerie"
+        "Support à la sélection et à l'implémentation d'un système de gestion de trésorerie"
       ],
       advantages: [
         "Gain de temps",
         "Employés mieux outillés en gestion de trésorerie",
         "Gain d'efficience grâce à l'allocation des employés à d'autres tâches",
-        "Reduction du risque d'erreur dans les opérations globales"
+        "Réduction du risque d'erreur dans les opérations globales"
       ]
     },
     {
-      title: "Solution spéciale",
+      title: "Solutions technologiques",
       image: "/SolutionSpeciale.jpg",
-      description: "Offrir des solutions sur mesure adaptées aux besoins spécifiques de chaque client.",
+      description: "Offrir des solutions technologiques sur mesure adaptées aux besoins spécifiques de chaque client.",
       details: [
         "Analyse approfondie des besoins",
         "Conception de solutions personnalisées",
@@ -194,7 +194,7 @@ export default function Services() {
               onClick={() => scrollToSection('#contact')}
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-darkgreen hover:bg-opacity-90 transition duration-300"
             >
-              Parlez à un expert
+              Contactez un expert
               <i className="fas fa-arrow-right ml-2"></i>
             </button>
           </div>

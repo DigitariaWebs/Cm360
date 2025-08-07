@@ -126,7 +126,7 @@ export default function Contact() {
                     href="mailto:info@cabinetcm360.com"
                     className="text-gray-600 hover:text-gold transition"
                   >
-                    info@cabinetcm360.com
+                    info@conseilcm360.com
                   </a>
                 </div>
               </div>

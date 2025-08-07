@@ -24,7 +24,7 @@ export default function Hero() {
           
           <MotionWrapper animation="fadeIn" delay={0.4}>
             <p className="text-lg text-gray-200 mb-8">
-              Optimisez la gestion de votre trésorerie d&#39;entreprise avec notre expertise pointue
+              Optimisez la gestion de votre trésorerie d&#39;entreprise avec notre expertise spécialisée
             </p>
           </MotionWrapper>
 

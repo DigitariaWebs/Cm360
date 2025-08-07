@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-gold: #D4AF37;
+  --color-gold: #EFBF04;
   --color-darkgreen: #1A3A2F;
   --font-family-playfair: 'Playfair Display', serif;
   --font-family-montserrat: 'Montserrat', sans-serif;

@@ -27,7 +27,7 @@ export default function Footer() {
               />
             </h3>
             <p className="text-gray-300 text-sm">
-              Cabinet de conseil spécialisé en optimisation de trésorerie d&#39;entreprise depuis 2010.
+              Cabinet de conseil spécialisé en optimisation de trésorerie d&#39;entreprise .
             </p>
           </div>
           <div>
@@ -58,13 +58,13 @@ export default function Footer() {
           <div>
             <h4 className="font-serif font-semibold mb-4 text-gold">Services</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Gestion de liquidité</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Optimisation du BFR</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Trésorerie Internationale</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Gestion des paiements</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Gestion des risques</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Formation & Coaching</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Diagnostic de Trésorerie</a></li>
+              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Diagnostique de Trésorerie</button></li>
+              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Gestion de liquidité</button></li>
+              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Optimisation des coûts</button></li>
+              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Appel d&apos;offres</button></li>
+              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Services administratifs</button></li>
+              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Support Client</button></li>
+              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Solutions technologiques</button></li>
             </ul>
           </div>
           <div>

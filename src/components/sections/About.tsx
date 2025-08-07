@@ -65,7 +65,7 @@ export default function About() {
             <div className="bg-gray-100 p-8 rounded-lg shadow-lg">
               <div className="aspect-w-16 aspect-h-9">
                 <Image
-                  src="/AboutSection.png"
+                  src="/AboutSection.jpg"
                   alt="Réunion d'entreprise"
                   width={500}
                   height={500}
@@ -74,7 +74,7 @@ export default function About() {
               </div>
               <div className="absolute -bottom-6 bg-darkgreen text-white p-6 rounded-lg shadow-xl w-3/4 max-w-xs sm:max-w-sm md:max-w-md right-2 sm:right-6">
                 <h4 className="font-serif font-bold text-lg mb-2">Notre Engagement</h4>
-                <p className="text-sm">Excellence, discrétion et résultats mesurables</p>
+                <p className="text-sm">Excellence, vos objectifs et résultats mesurables</p>
               </div>
             </div>
           </div>
