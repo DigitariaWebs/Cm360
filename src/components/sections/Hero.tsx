@@ -1,8 +1,10 @@
 'use client';
 
 import MotionWrapper from '../animations/MotionWrapper';
+import { useI18n } from '@/i18n/useI18n'
 
 export default function Hero() {
+  const { t } = useI18n()
   const scrollToSection = (sectionId: string) => {
     const element = document.querySelector(sectionId);
     if (element) {

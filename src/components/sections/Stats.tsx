@@ -77,7 +77,7 @@ export default function Stats() {
   return (
     <section className="py-16 bg-darkgreen text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8 text-center">
+        <div className="grid md:grid-cols-3 gap-8 text-center">
           <MotionWrapper animation="slideUp" delay={0.1}>
             <div>
               <Counter end={15} duration={2} suffix="+" />
@@ -92,17 +92,10 @@ export default function Stats() {
             </div>
           </MotionWrapper>
 
-          <MotionWrapper animation="slideUp" delay={0.3}>
-            <div>
-              <Counter end={2.5} duration={2} prefix="€" suffix="B" />
-              <div className="text-sm uppercase tracking-wider">De trésorerie optimisée</div>
-            </div>
-          </MotionWrapper>
-
           <MotionWrapper animation="slideUp" delay={0.4}>
             <div>
-              <Counter end={98} duration={2} suffix="%" />
-              <div className="text-sm uppercase tracking-wider">Taux de satisfaction</div>
+              <Counter end={100} duration={2} suffix="%" />
+              <div className="text-sm uppercase tracking-wider">Taux de satisfaction poursuivi</div>
             </div>
           </MotionWrapper>
         </div>

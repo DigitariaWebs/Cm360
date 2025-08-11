@@ -33,8 +33,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           <Image
             src={image}
             alt={title}
-            layout="fill"
-            objectFit="cover"
+            fill
+            sizes="100vw"
             className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
             onError={(e) => {
               // Fallback for missing image

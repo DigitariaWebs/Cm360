@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Montserrat } from 'next/font/google'
 import './globals.css'
+import { I18nProvider } from '@/i18n/I18nProvider'
+import en from '@/messages/en.json'
+import fr from '@/messages/fr.json'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -30,7 +33,9 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       </head>
       <body>
-        {children}
+        <I18nProvider initialLanguage="fr" messages={{ en, fr }}>
+          {children}
+        </I18nProvider>
       </body>
     </html>
   )

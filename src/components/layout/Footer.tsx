@@ -1,8 +1,10 @@
 'use client';
 
 import Image from 'next/image';
+import { useI18n } from '@/i18n/useI18n'
 
 export default function Footer() {
+  const { t } = useI18n()
   const scrollToSection = (sectionId: string) => {
     const element = document.querySelector(sectionId);
     if (element) {

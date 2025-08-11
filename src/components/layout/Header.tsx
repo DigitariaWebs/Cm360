@@ -2,9 +2,12 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { useI18n } from '@/i18n/useI18n'
+import { LanguageSwitcher } from '@/i18n/LanguageSwitcher'
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useI18n()
 
   // Smooth scroll and close mobile menu
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, sectionId: string) => {
@@ -31,29 +34,30 @@ export default function Header() {
               className="text-darkgreen hover:text-gold px-3 py-2 font-medium transition duration-300"
               onClick={e => handleNavClick(e, '#accueil')}
             >
-              Accueil
+              {t('nav.home')}
             </a>
             <a
               href="#apropos"
               className="text-darkgreen hover:text-gold px-3 py-2 font-medium transition duration-300"
               onClick={e => handleNavClick(e, '#apropos')}
             >
-              À Propos
+              {t('nav.about')}
             </a>
             <a
               href="#services"
               className="text-darkgreen hover:text-gold px-3 py-2 font-medium transition duration-300"
               onClick={e => handleNavClick(e, '#services')}
             >
-              Services
+              {t('nav.services')}
             </a>
             <a
               href="#contact"
               className="bg-darkgreen text-white px-4 py-2 rounded hover:bg-opacity-90 transition duration-300"
               onClick={e => handleNavClick(e, '#contact')}
             >
-              Contact
+              {t('nav.contact')}
             </a>
+            <LanguageSwitcher />
           </div>
         </div>
         <div className="md:hidden ml-4">
@@ -81,28 +85,28 @@ export default function Header() {
             className="block px-3 py-2 text-darkgreen hover:text-gold text-center"
             onClick={e => handleNavClick(e, '#accueil')}
           >
-            Accueil
+            {t('nav.home')}
           </a>
           <a
             href="#apropos"
             className="block px-3 py-2 text-darkgreen hover:text-gold text-center"
             onClick={e => handleNavClick(e, '#apropos')}
           >
-            À Propos
+            {t('nav.about')}
           </a>
           <a
             href="#services"
             className="block px-3 py-2 text-darkgreen hover:text-gold text-center"
             onClick={e => handleNavClick(e, '#services')}
           >
-            Services
+            {t('nav.services')}
           </a>
           <a
             href="#contact"
             className="block px-3 py-2 text-darkgreen hover:text-gold text-center"
             onClick={e => handleNavClick(e, '#contact')}
           >
-            Contact
+            {t('nav.contact')}
           </a>
         </div>
       </div>

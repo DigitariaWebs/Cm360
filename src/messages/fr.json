@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Gestion de trésorerie, 360°",
+    "cta": "Contactez-nous"
+  },
+  "footer": {
+    "rights": "Tous droits réservés"
+  }
+}
+
+

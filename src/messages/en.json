@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Treasury management, 360°",
+    "cta": "Contact us"
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  }
+}
+
+
