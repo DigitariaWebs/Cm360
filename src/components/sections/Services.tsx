@@ -4,8 +4,10 @@ import { useState } from 'react';
 import MotionWrapper from '../animations/MotionWrapper';
 import ServiceCard from './ServiceCard';
 import ServiceDetails from './ServiceDetails';
+import { useI18n } from '@/i18n/useI18n';
 
 export default function Services() {
+  const { t } = useI18n();
   const services = [
     {
       title: "Diagnostique de Trésorerie",
@@ -166,9 +168,9 @@ export default function Services() {
     <section id="services" className="py-20 bg-gray-50 relative z-10 pointer-events-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 pointer-events-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-serif font-bold text-darkgreen mb-4 gold-border pb-6">Nos Services</h2>
+            <h2 className="text-3xl font-serif font-bold text-darkgreen mb-4 gold-border pb-6">{t('services.sectionTitle')}</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Une gamme complète de services pour répondre à tous vos besoins en gestion de trésorerie.
+              {t('services.sectionDescription')}
             </p>
           </div>
 
@@ -194,7 +196,7 @@ export default function Services() {
               onClick={() => scrollToSection('#contact')}
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-darkgreen hover:bg-opacity-90 transition duration-300"
             >
-              Contactez un expert
+              {t('services.contactExpertBtn')}
               <i className="fas fa-arrow-right ml-2"></i>
             </button>
           </div>

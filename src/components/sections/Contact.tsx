@@ -2,8 +2,10 @@
 
 import { useState, useRef, useLayoutEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useI18n } from '@/i18n/useI18n';
 
 export default function Contact() {
+  const { t } = useI18n();
   const [formSuccess, setFormSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
@@ -66,11 +68,11 @@ export default function Contact() {
         setTimeout(() => setFormSuccess(false), 5000);
       } else {
         console.error('API error:', result);
-        setError(result.error || 'Une erreur est survenue');
+        setError(result.error || t('contact.errorGeneric'));
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      setError(`Erreur: ${error instanceof Error ? error.message : 'Erreur inconnue'}`);
+      setError(`${t('contact.error')}: ${error instanceof Error ? error.message : t('contact.errorUnknown')}`);
     } finally {
       setIsSubmitting(false);
     }
@@ -81,11 +83,8 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="fade-in">
-            <h2 className="text-3xl font-serif font-bold text-darkgreen mb-4 pb-4">Contactez-nous</h2>
-            <p className="text-gray-600 mb-5">
-              Nous sommes à votre disposition pour discuter de vos besoins en gestion de trésorerie et vous
-              proposer des solutions sur mesure.
-            </p>
+            <h2 className="text-3xl font-serif font-bold text-darkgreen mb-4 pb-4">{t('contact.title')}</h2>
+            <p className="text-gray-600 mb-5">{t('contact.description')}</p>
             <div className="gold-border mb-8"></div>
             <div className="space-y-6">
               <div className="flex items-start">
@@ -93,12 +92,12 @@ export default function Contact() {
                   <i className="fas fa-globe text-gold text-xl"></i>
                 </div>
                 <div className="ml-4">
-                  <h4 className="font-serif font-medium text-darkgreen">Régions desservies</h4>
+                  <h4 className="font-serif font-medium text-darkgreen">{t('contact.regions.title')}</h4>
                   <div className="text-gray-600">
-                    Amérique du Nord<br />
-                    Afrique<br />
-                    Caraïbes<br />
-                    Europe
+                    {t('contact.regions.northAmerica')}<br />
+                    {t('contact.regions.africa')}<br />
+                    {t('contact.regions.caribbean')}<br />
+                    {t('contact.regions.europe')}
                   </div>
                 </div>
               </div>
@@ -107,7 +106,7 @@ export default function Contact() {
                   <i className="fas fa-phone-alt text-gold text-xl"></i>
                 </div>
                 <div className="ml-4">
-                  <h4 className="font-serif font-medium text-darkgreen">Téléphone</h4>
+                  <h4 className="font-serif font-medium text-darkgreen">{t('contact.phone.title')}</h4>
                   <a
                     href="tel:+14385213151"
                     className="text-gray-600 hover:text-gold transition"
@@ -121,7 +120,7 @@ export default function Contact() {
                   <i className="fas fa-envelope text-gold text-xl"></i>
                 </div>
                 <div className="ml-4">
-                  <h4 className="font-serif font-medium text-darkgreen">Email</h4>
+                  <h4 className="font-serif font-medium text-darkgreen">{t('contact.email.title')}</h4>
                   <a
                     href="mailto:info@cabinetcm360.com"
                     className="text-gray-600 hover:text-gold transition"
@@ -148,66 +147,66 @@ export default function Contact() {
                   >
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                        Nom complet
+                        {t('contact.form.name')}
                       </label>
                       <input
                         type="text"
                         id="name"
                         name="name"
                         required
-                        placeholder="Votre nom complet"
+                        placeholder={t('contact.form.namePlaceholder')}
                         className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
                       />
                     </div>
                     <div>
                       <label htmlFor="enterprise" className="block text-sm font-medium text-gray-700">
-                        Entreprise
+                        {t('contact.form.enterprise')}
                       </label>
                       <input
                         type="text"
                         id="enterprise"
                         name="enterprise"
                         required
-                        placeholder="Nom de l'entreprise"
+                        placeholder={t('contact.form.enterprisePlaceholder')}
                         className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
                       />
                     </div>
                     <div>
                       <label htmlFor="telephone" className="block text-sm font-medium text-gray-700">
-                        Téléphone
+                        {t('contact.form.phone')}
                       </label>
                       <input
                         type="tel"
                         id="telephone"
                         name="telephone"
                         required
-                        placeholder="Votre numéro de téléphone"
+                        placeholder={t('contact.form.phonePlaceholder')}
                         className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
                       />
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                        Email
+                        {t('contact.form.email')}
                       </label>
                       <input
                         type="email"
                         id="email"
                         name="email"
                         required
-                        placeholder="Votre adresse email"
+                        placeholder={t('contact.form.emailPlaceholder')}
                         className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
                       />
                     </div>
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                        Message
+                        {t('contact.form.message')}
                       </label>
                       <textarea
                         id="message"
                         name="message"
                         rows={4}
                         required
-                        placeholder="Votre message"
+                        placeholder={t('contact.form.messagePlaceholder')}
                         className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-[#1A3A2F] focus:border-[#1A3A2F] focus:outline-none p-3 border"
                       ></textarea>
                     </div>
@@ -217,7 +216,7 @@ export default function Contact() {
                         disabled={isSubmitting}
                         className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-darkgreen hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gold transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
+                        {isSubmitting ? t('contact.form.sending') : t('contact.form.send')}
                       </button>
                     </div>
                   </motion.form>
@@ -237,15 +236,15 @@ export default function Contact() {
                           <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
                         </span>
                       </div>
-                      <h2 className="text-2xl font-bold text-darkgreen font-serif mb-2 text-center">Merci pour votre message !</h2>
-                      <p className="text-lg text-gray-700 text-center mb-2 max-w-md">Nous avons bien reçu votre demande et vous contacterons rapidement.<br/>Passez une excellente journée !</p>
+                      <h2 className="text-2xl font-bold text-darkgreen font-serif mb-2 text-center">{t('contact.success.title')}</h2>
+                      <p className="text-lg text-gray-700 text-center mb-2 max-w-md">{t('contact.success.message')}</p>
                       <button
                         type="button"
                         onClick={() => setFormSuccess(false)}
                         className="mt-6 px-6 py-2 rounded-lg bg-darkgreen text-white font-semibold shadow hover:bg-gold hover:text-darkgreen transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gold"
-                        aria-label="Envoyer un autre message"
+                        aria-label={t('contact.success.newMessage')}
                       >
-                        Envoyer un autre message
+                        {t('contact.success.newMessage')}
                       </button>
                     </div>
                   </motion.div>

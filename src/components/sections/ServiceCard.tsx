@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { useI18n } from '@/i18n/useI18n';
 
 interface ServiceCardProps {
   title: string;
@@ -16,6 +17,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   description, 
   onOpenModal
 }) => {
+  const { t } = useI18n();
   return (
     <button
       type="button"
@@ -32,7 +34,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <div className="absolute inset-0 rounded-2xl overflow-hidden">
           <Image
             src={image}
-            alt={title}
+            alt={t(`services.${title}.title`)}
             fill
             sizes="100vw"
             className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
@@ -63,7 +65,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           {/* Title at the top */}
           <div className="flex justify-between items-start">
             <h3 className="text-2xl font-bold leading-tight drop-shadow-2xl text-shadow-lg transition-transform duration-300 hover:scale-[1.005]">
-              {title}
+              {t(`services.${title}.title`)}
             </h3>
           </div>
 
@@ -71,7 +73,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           <div className="transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
             <div className="bg-black/40 backdrop-blur-sm rounded-lg p-4 border border-white/20 transition-all duration-300 hover:bg-black/50">
               <p className="text-sm leading-relaxed text-white/90 drop-shadow-lg">
-                {description}
+                {t(`services.${title}.description`)}
               </p>
             </div>
           </div>
@@ -81,4 +83,4 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   );
 };
 
-export default ServiceCard; 
+export default ServiceCard;

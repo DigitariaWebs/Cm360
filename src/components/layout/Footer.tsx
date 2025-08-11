@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useI18n } from '@/i18n/useI18n'
 
 export default function Footer() {
-  const { t } = useI18n()
+  const { t } = useI18n();
   const scrollToSection = (sectionId: string) => {
     const element = document.querySelector(sectionId);
     if (element) {
@@ -29,48 +29,48 @@ export default function Footer() {
               />
             </h3>
             <p className="text-gray-300 text-sm">
-              Cabinet de conseil spécialisé en optimisation de trésorerie d&#39;entreprise .
+              {t('footer.description')}
             </p>
           </div>
           <div>
-            <h4 className="font-serif font-semibold mb-4 text-gold">Navigation</h4>
+            <h4 className="font-serif font-semibold mb-4 text-gold">{t('footer.navigation')}</h4>
             <ul className="space-y-2">
               <li>
                 <button onClick={() => scrollToSection('#accueil')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">
-                  Accueil
+                  {t('nav.home')}
                 </button>
               </li>
               <li>
                 <button onClick={() => scrollToSection('#apropos')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">
-                  À Propos
+                  {t('nav.about')}
                 </button>
               </li>
               <li>
                 <button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">
-                  Services
+                  {t('nav.services')}
                 </button>
               </li>
               <li>
                 <button onClick={() => scrollToSection('#contact')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">
-                  Contact
+                  {t('nav.contact')}
                 </button>
               </li>
             </ul>
           </div>
           <div>
-            <h4 className="font-serif font-semibold mb-4 text-gold">Services</h4>
+            <h4 className="font-serif font-semibold mb-4 text-gold">{t('footer.services')}</h4>
             <ul className="space-y-2">
-              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Diagnostique de Trésorerie</button></li>
-              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Gestion de liquidité</button></li>
-              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Optimisation des coûts</button></li>
-              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Appel d&apos;offres</button></li>
-              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Services administratifs</button></li>
-              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Support Client</button></li>
-              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">Solutions technologiques</button></li>
+              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">{t('footer.diagnostique')}</button></li>
+              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">{t('footer.gestion')}</button></li>
+              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">{t('footer.optimisation')}</button></li>
+              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">{t('footer.appel')}</button></li>
+              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">{t('footer.administratifs')}</button></li>
+              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">{t('footer.support')}</button></li>
+              <li><button onClick={() => scrollToSection('#services')} className="text-gray-300 hover:text-white transition duration-300 cursor-pointer">{t('footer.solutions')}</button></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-serif font-semibold mb-4 text-gold">Réseaux</h4>
+            <h4 className="font-serif font-semibold mb-4 text-gold">{t('footer.networks')}</h4>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-white transition duration-300 cursor-pointer" aria-label="LinkedIn">
                 <i className="fab fa-linkedin-in text-xl"></i>
@@ -84,23 +84,23 @@ export default function Footer() {
             </div>
             <div className="mt-6">
               <a href="#" className="text-xs text-gray-400 hover:text-white transition duration-300 cursor-pointer">
-                Mentions légales
+                {t('footer.mentions')}
               </a>{' '}
               ·{' '}
               <a href="#" className="text-xs text-gray-400 hover:text-white transition duration-300 cursor-pointer">
-                CGV
+                {t('footer.cgv')}
               </a>{' '}
               ·{' '}
               <a href="#" className="text-xs text-gray-400 hover:text-white transition duration-300 cursor-pointer">
-                Politique de confidentialité
+                {t('footer.privacy')}
               </a>
             </div>
           </div>
         </div>
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400 text-sm">
-          &copy; {new Date().getFullYear()} Cabinet Conseil. Tous droits réservés.
+          &copy; {new Date().getFullYear()} {t('footer.copyright')}
         </div>
       </div>
     </footer>
   );
-} 
+}

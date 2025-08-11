@@ -5,13 +5,238 @@
     "about": "À propos",
     "contact": "Contact"
   },
-  "hero": {
-    "title": "Gestion de trésorerie, 360°",
-    "cta": "Contactez-nous"
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Nous sommes à votre disposition pour discuter de vos besoins en gestion de trésorerie et vous proposer des solutions sur mesure.",
+    "regions": {
+      "title": "Régions desservies",
+      "northAmerica": "Amérique du Nord",
+      "africa": "Afrique",
+      "caribbean": "Caraïbes",
+      "europe": "Europe"
+    },
+    "phone": {
+      "title": "Téléphone"
+    },
+    "email": {
+      "title": "Email"
+    },
+    "form": {
+      "name": "Nom complet",
+      "namePlaceholder": "Votre nom complet",
+      "enterprise": "Entreprise",
+      "enterprisePlaceholder": "Nom de l'entreprise",
+      "phone": "Téléphone",
+      "phonePlaceholder": "Votre numéro de téléphone",
+      "email": "Email",
+      "emailPlaceholder": "Votre adresse email",
+      "message": "Message",
+      "messagePlaceholder": "Votre message",
+      "sending": "Envoi en cours...",
+      "send": "Envoyer le message"
+    },
+    "success": {
+      "title": "Merci pour votre message !",
+      "message": "Nous avons bien reçu votre demande et vous contacterons rapidement.\nPassez une excellente journée !",
+      "newMessage": "Envoyer un autre message"
+    },
+    "error": "Erreur",
+    "errorGeneric": "Une erreur est survenue",
+    "errorUnknown": "Erreur inconnue"
   },
   "footer": {
-    "rights": "Tous droits réservés"
+    "description": "Cabinet de conseil spécialisé en optimisation de trésorerie d'entreprise.",
+    "navigation": "Navigation",
+    "services": "Services",
+    "diagnostique": "Diagnostique de Trésorerie",
+    "gestion": "Gestion de liquidité",
+    "optimisation": "Optimisation des coûts",
+    "appel": "Appel d'offres",
+    "administratifs": "Services administratifs",
+    "support": "Support Client",
+    "solutions": "Solutions technologiques",
+    "networks": "Réseaux",
+    "mentions": "Mentions légales",
+    "cgv": "CGV",
+    "privacy": "Politique de confidentialité",
+    "copyright": "Cabinet Conseil. Tous droits réservés."
+  },
+  "about": {
+    "title": "À Propos de Nous",
+    "description1": "CM360 est un cabinet de conseil expert en optimisation de la gestion de trésorerie, s'adressant aux petites, moyennes et grandes entreprises, ainsi qu'aux organisations paragouvernementales et aux OBNL.",
+    "description2": "CM360 offre également des services de conseil et de soutien aux équipes de gestion de trésorerie des institutions financières.",
+    "expertiseTitle": "Notre Expertise",
+    "expertiseDescription": "Forte de près de 15 ans d'expérience cumulée en gestion de trésorerie en entreprise, notre équipe d'experts vous accompagne dans l'optimisation de vos pratiques de gestion de trésorerie grâce à une approche d'analyse à 360 degrés. Celle-ci couvre notamment les volets suivants : recevables, payables, systèmes de gestion de trésorerie (TMS), investissement, gestion des risques, procédures, conformité, structure des frais et meilleures pratiques.",
+    "bullet1": "Approche personnalisée pour chaque client",
+    "bullet2": "Expertise et expérience reconnue au travers différentes industries et entreprises de différentes taille.",
+    "bullet3": "Solutions innovantes et conformes aux réglementations",
+    "imageAlt": "Réunion d'entreprise",
+    "commitmentTitle": "Notre Engagement",
+    "commitmentDescription": "Excellence, vos objectifs et résultats mesurables"
+  },
+  "hero": {
+    "titleHighlight": "Optimisation",
+    "title": "de la Trésorerie d'Entreprise",
+    "subtitle": "Optimisez la gestion de votre trésorerie d'entreprise avec notre expertise spécialisée",
+    "contactBtn": "Nous Contacter",
+    "servicesBtn": "Nos Services"
+  },
+  "serviceDetails": {
+    "detailsTitle": "Détails du service",
+    "advantagesTitle": "Avantages clés",
+    "contactBtn": "Contactez-nous"
+  },
+  "services": {
+    "sectionTitle": "Nos Services",
+    "sectionDescription": "Une gamme complète de services pour répondre à tous vos besoins en gestion de trésorerie.",
+    "contactExpertBtn": "Contactez un expert",
+    "Diagnostique de Trésorerie": {
+      "title": "Diagnostique de Trésorerie",
+      "description": "Diagnostique de trésorerie approfondi, analyse de l'ensemble de vos opérations pour identifier les inefficacités et les possibilités d'amélioration.",
+      "details": [
+        "Diagnostique des payables",
+        "Diagnostique des recevables",
+        "Diagnostique de la structure des comptes et rendement des excédents",
+        "Diagnostique des opérations et processus",
+        "Diagnostique des frais et relations bancaires",
+        "Cartographie des recevables, payables et système de gestion",
+        "Analyse des risques"
+      ],
+      "advantages": [
+        "Vision claire de votre gestion de trésorerie",
+        "Identification d'économies potentielles",
+        "Identification des zones d'inefficiences",
+        "Identification d'opportunités d'automatisation et d'amélioration de processus",
+        "Identification d'opportunités pour optimisation de liquidités et de coûts",
+        "Identification du risque financier, sécuritaire, réglementaire, etc."
+      ]
+    },
+    "Gestion de liquidité": {
+      "title": "Gestion de liquidité",
+      "description": "Solutions personnalisées pour optimiser la prévision de trésorerie et la gestion de la liquidité, en guidant nos clients dans le choix et le déploiement des outils les plus adaptés afin d'assurer une position de liquidité solide.",
+      "details": [
+        "Optimisation des payables",
+        "Optimisation des recevables",
+        "Optimisation des processus et structure de compte",
+        "Optimisation d'accès aux rapports détaillés",
+        "Stratégie de placement des excédents"
+      ],
+      "advantages": [
+        "Identification des solutions personnalisées rapides et sécuritaires pour les paiements et recevables",
+        "Consolidation des méthodes de paiements",
+        "Restructuration des comptes bancaires et accroissement de visibilité de la position financière quotidienne",
+        "Maximisation des rendements des excédents",
+        "Meilleur contrôle interne des opérations et équipes"
+      ]
+    },
+    "Optimisation des coûts": {
+      "title": "Optimisation des coûts",
+      "description": "Forts de notre expérience approfondie des banques et de leurs modèles de tarification, nous vous aidons à diminuer vos frais bancaires, à optimiser vos revenus d'intérêts et à simplifier la gestion de votre trésorerie.",
+      "details": [
+        "Optimisation des frais",
+        "Optimisation des systèmes",
+        "Optimisation des processus opérationnels"
+      ],
+      "advantages": [
+        "Révision des ententes bancaires et frais de services plus avantageux",
+        "Consolidation des comptes et relations bancaires",
+        "Automatisation des payables et recevables",
+        "Optimisation du système de gestion de trésorerie",
+        "Automatisation et réduction des opérations manuelles et répétitives",
+        "Réduction du risque"
+      ]
+    },
+    "Appel d'offres": {
+      "title": "Appel d'offres",
+      "description": "Expertise spécialisée pour accompagner les entreprises dans la rédaction d'appels d'offres pour les services bancaires et pour soutenir les équipes de gestion de trésorerie des institutions financières dans l'élaboration des réponses aux appels d'offres.",
+      "details": [
+        "Diagnostique et cartographie des services actuels",
+        "Identification des besoins exacts de l'entreprise",
+        "Cartographie de la structure et identification des services futurs de la gestion de trésorerie",
+        "Établissement des critères d'évaluation des réponses des appels d'offres",
+        "Préparation du cahier des charges",
+        "Accompagnement des institutions financières pour l'élaboration des réponses aux appels d'offres"
+      ],
+      "advantages": [
+        "Processus structure",
+        "Gain de temps",
+        "Allocation efficiente de vos ressources humaines",
+        "Charge de projet dédié",
+        "Identifier les meilleurs services à implémenter en tirant avantage de notre connaissance approfondie des services bancaires offerts par les banques"
+      ]
+    },
+    "Services administratifs": {
+      "title": "Services administratifs",
+      "description": "Soutien administratif pour les petites et moyennes entreprises; ainsi que les OBNL",
+      "details": [
+        "Tenue de livres",
+        "Comptabilité",
+        "Optimisation de la gestion des employés",
+        "Intégration de solutions de paiements en ligne",
+        "Organisation d'entreprise",
+        "Personnalisation de la communication"
+      ],
+      "advantages": [
+        "Gain de temps",
+        "Reduction des coûts et meilleure allocation des ressources",
+        "Fluidification des flux de trésorerie",
+        "Meilleur suivi des données comptables et financières"
+      ]
+    },
+    "Support Client": {
+      "title": "Support Client",
+      "description": "Sessions de formation dédiées à l'introduction à la gestion de trésorerie et au partage de bonnes pratiques, tout en offrant un soutien régulier à nos clients.",
+      "details": [
+        "Formation des nouveaux employés en ce qui concerne les produits et services de gestion de trésorerie",
+        "Séance de partage de bonnes pratiques en gestion de trésorerie",
+        "Support à la sélection et à l'implémentation d'un système de gestion de trésorerie"
+      ],
+      "advantages": [
+        "Gain de temps",
+        "Employés mieux outillés en gestion de trésorerie",
+        "Gain d'efficience grâce à l'allocation des employés à d'autres tâches",
+        "Réduction du risque d'erreur dans les opérations globales"
+      ]
+    },
+    "Solutions technologiques": {
+      "title": "Solutions technologiques",
+      "description": "Offrir des solutions technologiques sur mesure adaptées aux besoins spécifiques de chaque client.",
+      "details": [
+        "Analyse approfondie des besoins",
+        "Conception de solutions personnalisées",
+        "Mise en œuvre des stratégies",
+        "Suivi et optimisation continue"
+      ],
+      "advantages": [
+        "Approche sur mesure",
+        "Résultats adaptés",
+        "Flexibilité et innovation",
+        "Accompagnement dédié"
+      ]
+    }
+  },
+  "stats": {
+    "experience": "Ans d'expérience",
+    "clients": "Clients accompagnés",
+    "satisfaction": "Taux de satisfaction poursuivi"
+  },
+  "testimonials": {
+    "title": "Témoignages",
+    "description": "Ce que disent nos clients à propos de notre collaboration.",
+    "0": {
+      "name": "Pierre D.",
+      "role": "Directeur Financier - Groupe Industriel",
+      "text": "Cm360 nous a permis de réduire notre BFR de 30 jours grâce à une analyse fine de nos processus et des négociations ciblées avec nos fournisseurs."
+    },
+    "1": {
+      "name": "Sophie L.",
+      "role": "DGA - Entreprise du CAC40",
+      "text": "Leur expertise en cash pooling international a transformé notre gestion de trésorerie, avec des économies substantielles sur nos coûts financiers."
+    },
+    "2": {
+      "name": "Jean-Marc R.",
+      "role": "PDG - Groupe International",
+      "text": "Approche très professionnelle et résultats concrets. Nous avons renouvelé notre contrat pour la 5ème année consécutive."
+    }
   }
 }
-
-

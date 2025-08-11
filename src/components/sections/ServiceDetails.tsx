@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useI18n } from '@/i18n/useI18n';
 
 interface ServiceDetailsProps {
   isOpen: boolean;
@@ -17,6 +18,8 @@ interface ServiceDetailsProps {
 }
 
 const ServiceDetails: React.FC<ServiceDetailsProps> = ({ isOpen, onClose, service }) => {
+  const { t } = useI18n();
+
   console.log('ServiceDetails MOUNTED - service:', service.title);
 
   useEffect(() => {
@@ -73,8 +76,8 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ isOpen, onClose, servic
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white mb-2 line-clamp-2">{service.title}</h2>
-            <p className="text-white/90 text-base sm:text-lg line-clamp-2">{service.description}</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white mb-2 line-clamp-2">{t(`services.${service.title}.title`)}</h2>
+            <p className="text-white/90 text-base sm:text-lg line-clamp-2">{t(`services.${service.title}.description`)}</p>
           </div>
           {/* X Close Button on image */}
           <button
@@ -94,7 +97,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ isOpen, onClose, servic
           {service.details && service.details.length > 0 && (
             <div className="mb-8">
               <h3 className="text-xl font-serif font-bold text-darkgreen mb-4 pb-2 border-b border-gold/30">
-                Détails du service
+                {t('serviceDetails.detailsTitle')}
               </h3>
               <ul className="grid md:grid-cols-2 gap-4">
                 {service.details.map((detail, index) => (
@@ -104,7 +107,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ isOpen, onClose, servic
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </span>
-                    <span className="text-gray-700">{detail}</span>
+                    <span className="text-gray-700">{t(`services.${service.title}.details.${index}`)}</span>
                   </li>
                 ))}
               </ul>
@@ -115,7 +118,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ isOpen, onClose, servic
           {service.advantages && service.advantages.length > 0 && (
             <div className="mb-8">
               <h3 className="text-xl font-serif font-bold text-darkgreen mb-4 pb-2 border-b border-gold/30">
-                Avantages clés
+                {t('serviceDetails.advantagesTitle')}
               </h3>
               <ul className="grid md:grid-cols-2 gap-4">
                 {service.advantages.map((advantage, index) => (
@@ -125,7 +128,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ isOpen, onClose, servic
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                       </svg>
                     </span>
-                    <span className="text-gray-700">{advantage}</span>
+                    <span className="text-gray-700">{t(`services.${service.title}.advantages.${index}`)}</span>
                   </li>
                 ))}
               </ul>
@@ -147,7 +150,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ isOpen, onClose, servic
               }}
               className="inline-flex items-center px-8 py-3 bg-darkgreen text-white rounded-lg hover:bg-opacity-90 transition duration-300 space-x-2 group"
             >
-              <span>Contactez-nous</span>
+              <span>{t('serviceDetails.contactBtn')}</span>
               <svg 
                 className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" 
                 fill="none" 
@@ -164,4 +167,4 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ isOpen, onClose, servic
   );
 };
 
-export default ServiceDetails; 
+export default ServiceDetails;

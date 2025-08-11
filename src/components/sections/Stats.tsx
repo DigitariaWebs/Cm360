@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import MotionWrapper from '../animations/MotionWrapper';
+import { useI18n } from '@/i18n/useI18n';
 
 interface CounterProps {
   end: number;
@@ -74,6 +75,7 @@ function Counter({ end, duration, prefix = '', suffix = '' }: CounterProps) {
 }
 
 export default function Stats() {
+  const { t } = useI18n();
   return (
     <section className="py-16 bg-darkgreen text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,25 +83,25 @@ export default function Stats() {
           <MotionWrapper animation="slideUp" delay={0.1}>
             <div>
               <Counter end={15} duration={2} suffix="+" />
-              <div className="text-sm uppercase tracking-wider">Ans d&#39;expérience</div>
+              <div className="text-sm uppercase tracking-wider">{t('stats.experience')}</div>
             </div>
           </MotionWrapper>
 
           <MotionWrapper animation="slideUp" delay={0.2}>
             <div>
               <Counter end={150} duration={2} suffix="+" />
-              <div className="text-sm uppercase tracking-wider">Clients accompagnés</div>
+              <div className="text-sm uppercase tracking-wider">{t('stats.clients')}</div>
             </div>
           </MotionWrapper>
 
           <MotionWrapper animation="slideUp" delay={0.4}>
             <div>
               <Counter end={100} duration={2} suffix="%" />
-              <div className="text-sm uppercase tracking-wider">Taux de satisfaction poursuivi</div>
+              <div className="text-sm uppercase tracking-wider">{t('stats.satisfaction')}</div>
             </div>
           </MotionWrapper>
         </div>
       </div>
     </section>
   );
-} 
+}

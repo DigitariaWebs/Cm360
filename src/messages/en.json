@@ -5,13 +5,238 @@
     "about": "About",
     "contact": "Contact"
   },
-  "hero": {
-    "title": "Treasury management, 360°",
-    "cta": "Contact us"
+  "contact": {
+    "title": "Contact Us",
+    "description": "We are at your disposal to discuss your treasury management needs and propose tailored solutions.",
+    "regions": {
+      "title": "Regions Served",
+      "northAmerica": "North America",
+      "africa": "Africa",
+      "caribbean": "Caribbean",
+      "europe": "Europe"
+    },
+    "phone": {
+      "title": "Phone"
+    },
+    "email": {
+      "title": "Email"
+    },
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Your full name",
+      "enterprise": "Company",
+      "enterprisePlaceholder": "Company name",
+      "phone": "Phone",
+      "phonePlaceholder": "Your phone number",
+      "email": "Email",
+      "emailPlaceholder": "Your email address",
+      "message": "Message",
+      "messagePlaceholder": "Your message",
+      "sending": "Sending...",
+      "send": "Send message"
+    },
+    "success": {
+      "title": "Thank you for your message!",
+      "message": "We have received your request and will contact you shortly.\nHave a great day!",
+      "newMessage": "Send another message"
+    },
+    "error": "Error",
+    "errorGeneric": "An error occurred",
+    "errorUnknown": "Unknown error"
   },
   "footer": {
-    "rights": "All rights reserved"
+    "description": "Specialized consulting firm in corporate treasury optimization.",
+    "navigation": "Navigation",
+    "services": "Services",
+    "diagnostique": "Treasury Diagnosis",
+    "gestion": "Liquidity Management",
+    "optimisation": "Cost Optimization",
+    "appel": "Call for Tenders",
+    "administratifs": "Administrative Services",
+    "support": "Customer Support",
+    "solutions": "Technological Solutions",
+    "networks": "Networks",
+    "mentions": "Legal Notice",
+    "cgv": "Terms and Conditions",
+    "privacy": "Privacy Policy",
+    "copyright": "Consulting Firm. All rights reserved."
+  },
+  "about": {
+    "title": "About Us",
+    "description1": "CM360 is a consulting firm specializing in treasury management optimization, catering to small, medium, and large enterprises, as well as parastatal organizations and NGOs.",
+    "description2": "CM360 also provides consulting and support services to treasury management teams of financial institutions.",
+    "expertiseTitle": "Our Expertise",
+    "expertiseDescription": "With nearly 15 years of cumulative experience in corporate treasury management, our team of experts supports you in optimizing your treasury management practices through a 360-degree analysis approach. This includes receivables, payables, treasury management systems (TMS), investment, risk management, procedures, compliance, fee structure, and best practices.",
+    "bullet1": "Personalized approach for each client",
+    "bullet2": "Recognized expertise and experience across various industries and companies of different sizes.",
+    "bullet3": "Innovative and regulation-compliant solutions",
+    "imageAlt": "Business meeting",
+    "commitmentTitle": "Our Commitment",
+    "commitmentDescription": "Excellence, your objectives, and measurable results"
+  },
+  "hero": {
+    "titleHighlight": "Optimization",
+    "title": "of Corporate Treasury",
+    "subtitle": "Optimize your corporate treasury management with our specialized expertise",
+    "contactBtn": "Contact Us",
+    "servicesBtn": "Our Services"
+  },
+  "services": {
+    "sectionTitle": "Our Services",
+    "sectionDescription": "A complete range of services to meet all your treasury management needs.",
+    "contactExpertBtn": "Contact an expert",
+    "Diagnostique de Trésorerie": {
+      "title": "Treasury Diagnosis",
+      "description": "In-depth treasury diagnosis, analysis of all your operations to identify inefficiencies and improvement opportunities.",
+      "details": [
+        "Payables diagnosis",
+        "Receivables diagnosis",
+        "Account structure and surplus yield diagnosis",
+        "Operations and process diagnosis",
+        "Fees and banking relationships diagnosis",
+        "Receivables, payables and management system mapping",
+        "Risk analysis"
+      ],
+      "advantages": [
+        "Clear vision of your treasury management",
+        "Identification of potential savings",
+        "Identification of inefficiency areas",
+        "Identification of automation and process improvement opportunities",
+        "Identification of liquidity and cost optimization opportunities",
+        "Identification of financial, security, regulatory risk, etc."
+      ]
+    },
+    "Gestion de liquidité": {
+      "title": "Liquidity Management",
+      "description": "Personalized solutions to optimize cash forecasting and liquidity management, guiding our clients in choosing and deploying the best tools to ensure a solid liquidity position.",
+      "details": [
+        "Payables optimization",
+        "Receivables optimization",
+        "Process and account structure optimization",
+        "Access to detailed reports optimization",
+        "Surplus investment strategy"
+      ],
+      "advantages": [
+        "Identification of fast and secure personalized solutions for payments and receivables",
+        "Consolidation of payment methods",
+        "Restructuring of bank accounts and increased visibility of daily financial position",
+        "Maximization of surplus yields",
+        "Better internal control of operations and teams"
+      ]
+    },
+    "Optimisation des coûts": {
+      "title": "Cost Optimization",
+      "description": "With our deep experience of banks and their pricing models, we help you reduce banking fees, optimize interest income, and simplify treasury management.",
+      "details": [
+        "Fee optimization",
+        "System optimization",
+        "Operational process optimization"
+      ],
+      "advantages": [
+        "Review of banking agreements and more advantageous service fees",
+        "Consolidation of accounts and banking relationships",
+        "Automation of payables and receivables",
+        "Treasury management system optimization",
+        "Automation and reduction of manual and repetitive operations",
+        "Risk reduction"
+      ]
+    },
+    "Appel d'offres": {
+      "title": "Call for Tenders",
+      "description": "Specialized expertise to support companies in drafting tenders for banking services and to assist treasury management teams of financial institutions in preparing responses to tenders.",
+      "details": [
+        "Diagnosis and mapping of current services",
+        "Identification of the company's exact needs",
+        "Mapping of structure and identification of future treasury management services",
+        "Establishment of evaluation criteria for tender responses",
+        "Preparation of specifications",
+        "Support for financial institutions in preparing tender responses"
+      ],
+      "advantages": [
+        "Structured process",
+        "Time saving",
+        "Efficient allocation of human resources",
+        "Dedicated project management",
+        "Identify the best services to implement by leveraging our in-depth knowledge of banking services offered by banks"
+      ]
+    },
+    "Services administratifs": {
+      "title": "Administrative Services",
+      "description": "Administrative support for small and medium-sized businesses; as well as NGOs.",
+      "details": [
+        "Bookkeeping",
+        "Accounting",
+        "Employee management optimization",
+        "Integration of online payment solutions",
+        "Business organization",
+        "Personalized communication"
+      ],
+      "advantages": [
+        "Time saving",
+        "Cost reduction and better resource allocation",
+        "Streamlining of cash flows",
+        "Better tracking of accounting and financial data"
+      ]
+    },
+    "Support Client": {
+      "title": "Customer Support",
+      "description": "Dedicated training sessions for introduction to treasury management and sharing best practices, while providing ongoing support to our clients.",
+      "details": [
+        "Training of new employees regarding treasury management products and services",
+        "Best practices sharing session in treasury management",
+        "Support for selection and implementation of a treasury management system"
+      ],
+      "advantages": [
+        "Time saving",
+        "Employees better equipped in treasury management",
+        "Efficiency gain by allocating employees to other tasks",
+        "Reduction of error risk in overall operations"
+      ]
+    },
+    "Solutions technologiques": {
+      "title": "Technological Solutions",
+      "description": "Providing tailor-made technological solutions adapted to the specific needs of each client.",
+      "details": [
+        "In-depth needs analysis",
+        "Design of personalized solutions",
+        "Strategy implementation",
+        "Continuous monitoring and optimization"
+      ],
+      "advantages": [
+        "Tailor-made approach",
+        "Adapted results",
+        "Flexibility and innovation",
+        "Dedicated support"
+      ]
+    }
+  },
+  "serviceDetails": {
+    "detailsTitle": "Service Details",
+    "advantagesTitle": "Key Advantages",
+    "contactBtn": "Contact Us"
+  },
+  "stats": {
+    "experience": "Years of experience",
+    "clients": "Clients supported",
+    "satisfaction": "Satisfaction rate achieved"
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "description": "What our clients say about working with us.",
+    "0": {
+      "name": "Pierre D.",
+      "role": "CFO - Industrial Group",
+      "text": "Cm360 helped us reduce our working capital requirement by 30 days thanks to a thorough analysis of our processes and targeted negotiations with our suppliers."
+    },
+    "1": {
+      "name": "Sophie L.",
+      "role": "Deputy CEO - CAC40 Company",
+      "text": "Their expertise in international cash pooling transformed our treasury management, with substantial savings on our financial costs."
+    },
+    "2": {
+      "name": "Jean-Marc R.",
+      "role": "CEO - International Group",
+      "text": "Very professional approach and concrete results. We have renewed our contract for the 5th consecutive year."
+    }
   }
 }
-
-

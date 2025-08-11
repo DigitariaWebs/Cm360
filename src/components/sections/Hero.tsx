@@ -20,13 +20,13 @@ export default function Hero() {
         <div className="relative z-20 px-4 sm:px-6 lg:px-8 max-w-4xl text-center pt-[128px] pb-0">
           <MotionWrapper animation="slideUp" delay={0.2}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
-              <span className="text-gold">Optimisation</span> de la Trésorerie d&apos;Entreprise
+              <span className="text-gold">{t('hero.titleHighlight')}</span> {t('hero.title')}
             </h1>
           </MotionWrapper>
           
           <MotionWrapper animation="fadeIn" delay={0.4}>
             <p className="text-lg text-gray-200 mb-8">
-              Optimisez la gestion de votre trésorerie d&#39;entreprise avec notre expertise spécialisée
+              {t('hero.subtitle')}
             </p>
           </MotionWrapper>
 
@@ -36,13 +36,13 @@ export default function Hero() {
                 onClick={() => scrollToSection('#contact')}
                 className="bg-gold text-darkgreen px-8 py-3 rounded font-medium hover:bg-opacity-90 transition duration-300 cursor-pointer"
               >
-                Nous Contacter
+                {t('hero.contactBtn')}
               </button>
               <button
                 onClick={() => scrollToSection('#services')}
                 className="border border-white text-white px-8 py-3 rounded font-medium hover:bg-white hover:text-darkgreen transition duration-300 cursor-pointer"
               >
-                Nos Services
+                {t('hero.servicesBtn')}
               </button>
             </div>
           </MotionWrapper>
@@ -57,4 +57,4 @@ export default function Hero() {
       </div>
     </section>
   );
-} 
+}
