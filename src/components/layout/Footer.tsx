@@ -82,7 +82,15 @@ export default function Footer() {
                 <i className="fab fa-facebook-f text-xl"></i>
               </a>
             </div>
-            <div className="mt-6">
+            <div className="mt-6"></div>
+          </div>
+        </div>
+        <div className="border-t border-gray-700 mt-12 pt-8 text-gray-400 text-sm">
+          <div className="flex items-center justify-between flex-wrap gap-2">
+            <div>
+              &copy; {new Date().getFullYear()} {t('footer.copyright')}
+            </div>
+            <div className="text-right">
               <a href="#" className="text-xs text-gray-400 hover:text-white transition duration-300 cursor-pointer">
                 {t('footer.mentions')}
               </a>{' '}
@@ -91,14 +99,11 @@ export default function Footer() {
                 {t('footer.cgv')}
               </a>{' '}
               ·{' '}
-              <a href="#" className="text-xs text-gray-400 hover:text-white transition duration-300 cursor-pointer">
+              <a href="/privacy" className="text-xs text-gray-400 hover:text-white transition duration-300 cursor-pointer">
                 {t('footer.privacy')}
               </a>
             </div>
           </div>
-        </div>
-        <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400 text-sm">
-          &copy; {new Date().getFullYear()} {t('footer.copyright')}
         </div>
       </div>
     </footer>

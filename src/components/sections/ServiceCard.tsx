@@ -7,14 +7,12 @@ import { useI18n } from '@/i18n/useI18n';
 interface ServiceCardProps {
   title: string;
   image: string;
-  description: string;
   onOpenModal: (title: string) => void;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ 
   title, 
   image, 
-  description, 
   onOpenModal
 }) => {
   const { t } = useI18n();

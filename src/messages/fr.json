@@ -238,5 +238,58 @@
       "role": "PDG - Groupe International",
       "text": "Approche très professionnelle et résultats concrets. Nous avons renouvelé notre contrat pour la 5ème année consécutive."
     }
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "updated": "Dernière mise à jour : 14 aout 2025",
+    "intro": "Nous attachons une importance particulière à la protection de vos données personnelles. Cette politique décrit quelles informations nous collectons, comment nous les utilisons et vos droits, conformément au Règlement Général sur la Protection des Données (RGPD).",
+    "sections": {
+      "controller": {
+        "title": "1. Responsable du traitement",
+        "items": "Nom / Raison sociale : CM360\nEmail : info@conseilcm360.com"
+      },
+      "collected": {
+        "title": "2. Données collectées",
+        "items": "Nom, prénom\nAdresse e-mail, numéro de téléphone\nInformations transmises via formulaires (prise de rendez-vous, messages, etc.)\nDonnées de navigation (adresse IP, pages consultées, cookies)"
+      },
+      "purposes": {
+        "title": "3. Finalités de la collecte",
+        "items": "Répondre à vos demandes et gérer les rendez-vous\nFournir et améliorer nos services\nAssurer la sécurité du site et prévenir la fraude\nRespecter nos obligations légales et réglementaires"
+      },
+      "legalBasis": {
+        "title": "4. Base légale du traitement",
+        "items": "Exécution d’un contrat ou de mesures précontractuelles\nConsentement (pour certaines fonctionnalités, ex. : newsletter, cookies analytiques)\nIntérêt légitime (sécurité, amélioration du service)\nObligation légale"
+      },
+      "sharing": {
+        "title": "5. Partage des données",
+        "intro": "Vos données ne sont jamais vendues. Elles peuvent être transmises uniquement :",
+        "items": "À nos prestataires techniques (hébergement, maintenance, outils de prise de rendez-vous) strictement nécessaires\nAux autorités compétentes si la loi l’exige"
+      },
+      "retention": {
+        "title": "6. Durée de conservation",
+        "items": "Données de contact : 3 ans après le dernier échange\nDonnées de facturation : 10 ans (obligation légale)\nCookies : 13 mois maximum"
+      },
+      "cookies": {
+        "title": "7. Cookies",
+        "text": "Nous utilisons des cookies nécessaires au fonctionnement du site et, avec votre consentement, des cookies de mesure d’audience. Vous pouvez gérer vos préférences via le bandeau cookies et le paramétrage de votre navigateur."
+      },
+      "rights": {
+        "title": "8. Vos droits",
+        "p1": "Conformément au RGPD, vous disposez des droits d’accès, de rectification, d’effacement, de limitation, d’opposition et à la portabilité. Pour exercer vos droits : {email}.",
+        "p2": "Vous pouvez aussi introduire une réclamation auprès de la CNIL."
+      },
+      "security": {
+        "title": "9. Sécurité",
+        "text": "Nous appliquons des mesures techniques et organisationnelles adaptées pour protéger vos données contre l’accès non autorisé, la divulgation, la modification ou la destruction."
+      },
+      "contact": {
+        "title": "10. Contact",
+        "text": "Pour toute question concernant cette politique ou vos données personnelles : {email}."
+      },
+      "changes": {
+        "title": "11. Modifications",
+        "text": "Nous pouvons mettre à jour cette politique afin de refléter des changements légaux ou techniques. La date de mise à jour figurera en haut de page."
+      }
+    }
   }
 }

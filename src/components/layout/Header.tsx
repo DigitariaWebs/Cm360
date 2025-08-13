@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link'
 import { useI18n } from '@/i18n/useI18n'
 import { LanguageSwitcher } from '@/i18n/LanguageSwitcher'
 
@@ -9,13 +10,18 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { t } = useI18n()
 
-  // Smooth scroll and close mobile menu
+  // Smooth scroll on homepage; otherwise let default navigation to /#section occur
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, sectionId: string) => {
-    e.preventDefault();
-    const element = document.querySelector(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
+    if (typeof window !== 'undefined' && window.location.pathname === '/') {
+      e.preventDefault();
+      const element = document.querySelector(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        setIsMobileMenuOpen(false);
+        try {
+          window.history.replaceState(null, '', sectionId);
+        } catch {}
+      }
     }
   };
 
@@ -23,40 +29,40 @@ export default function Header() {
     <nav className="sticky top-6 left-0 right-0 w-full z-[9999]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 bg-white/80 rounded-full shadow-md backdrop-blur-md flex justify-between items-center">
         <div className="flex-shrink-0 flex items-center">
-          <a href="#accueil">
+          <Link href="/#accueil" onClick={e => handleNavClick(e, '#accueil')}>
             <Image src="/Logo.png" alt="Cm360 Logo" width={64} height={64} />
-          </a>
+          </Link>
         </div>
         <div className="hidden md:block">
           <div className="ml-10 flex items-center space-x-8">
-            <a
-              href="#accueil"
+            <Link
+              href="/#accueil"
               className="text-darkgreen hover:text-gold px-3 py-2 font-medium transition duration-300"
               onClick={e => handleNavClick(e, '#accueil')}
             >
               {t('nav.home')}
-            </a>
-            <a
-              href="#apropos"
+            </Link>
+            <Link
+              href="/#apropos"
               className="text-darkgreen hover:text-gold px-3 py-2 font-medium transition duration-300"
               onClick={e => handleNavClick(e, '#apropos')}
             >
               {t('nav.about')}
-            </a>
-            <a
-              href="#services"
+            </Link>
+            <Link
+              href="/#services"
               className="text-darkgreen hover:text-gold px-3 py-2 font-medium transition duration-300"
               onClick={e => handleNavClick(e, '#services')}
             >
               {t('nav.services')}
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              href="/#contact"
               className="bg-darkgreen text-white px-4 py-2 rounded hover:bg-opacity-90 transition duration-300"
               onClick={e => handleNavClick(e, '#contact')}
             >
               {t('nav.contact')}
-            </a>
+            </Link>
             <LanguageSwitcher />
           </div>
         </div>
@@ -80,34 +86,34 @@ export default function Header() {
         style={{ minWidth: '320px' }}
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center justify-center">
-          <a
-            href="#accueil"
+          <Link
+            href="/#accueil"
             className="block px-3 py-2 text-darkgreen hover:text-gold text-center"
             onClick={e => handleNavClick(e, '#accueil')}
           >
             {t('nav.home')}
-          </a>
-          <a
-            href="#apropos"
+          </Link>
+          <Link
+            href="/#apropos"
             className="block px-3 py-2 text-darkgreen hover:text-gold text-center"
             onClick={e => handleNavClick(e, '#apropos')}
           >
             {t('nav.about')}
-          </a>
-          <a
-            href="#services"
+          </Link>
+          <Link
+            href="/#services"
             className="block px-3 py-2 text-darkgreen hover:text-gold text-center"
             onClick={e => handleNavClick(e, '#services')}
           >
             {t('nav.services')}
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            href="/#contact"
             className="block px-3 py-2 text-darkgreen hover:text-gold text-center"
             onClick={e => handleNavClick(e, '#contact')}
           >
             {t('nav.contact')}
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

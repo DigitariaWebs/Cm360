@@ -148,9 +148,9 @@
         "Diagnosis and mapping of current services",
         "Identification of the company's exact needs",
         "Mapping of structure and identification of future treasury management services",
-        "Establishment of evaluation criteria for tender responses",
+        "Establishment of evaluation criteria for RFP responses",
         "Preparation of specifications",
-        "Support for financial institutions in preparing tender responses"
+        "Support for financial institutions in preparing RFP responses"
       ],
       "advantages": [
         "Structured process",
@@ -237,6 +237,59 @@
       "name": "Jean-Marc R.",
       "role": "CEO - International Group",
       "text": "Very professional approach and concrete results. We have renewed our contract for the 5th consecutive year."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": "Last updated: August 14, 2025",
+    "intro": "We attach particular importance to protecting your personal data. This policy describes what information we collect, how we use it, and your rights, in accordance with the General Data Protection Regulation (GDPR).",
+    "sections": {
+      "controller": {
+        "title": "1. Data Controller",
+        "items": "Company name: CM360\nEmail: info@conseilcm360.com"
+      },
+      "collected": {
+        "title": "2. Data Collected",
+        "items": "First and last name\nEmail address, phone number\nInformation submitted via forms (appointments, messages, etc.)\nBrowsing data (IP address, pages visited, cookies)"
+      },
+      "purposes": {
+        "title": "3. Purposes of Collection",
+        "items": "Respond to your requests and manage appointments\nProvide and improve our services\nEnsure site security and prevent fraud\nComply with our legal and regulatory obligations"
+      },
+      "legalBasis": {
+        "title": "4. Legal Basis for Processing",
+        "items": "Performance of a contract or pre-contractual measures\nConsent (for certain features, e.g., newsletter, analytics cookies)\nLegitimate interest (security, service improvement)\nLegal obligation"
+      },
+      "sharing": {
+        "title": "5. Data Sharing",
+        "intro": "Your data is never sold. It may only be shared:",
+        "items": "With our technical providers (hosting, maintenance, appointment tools) strictly as necessary\nWith competent authorities if required by law"
+      },
+      "retention": {
+        "title": "6. Data Retention",
+        "items": "Contact data: 3 years after the last interaction\nBilling data: 10 years (legal obligation)\nCookies: up to 13 months"
+      },
+      "cookies": {
+        "title": "7. Cookies",
+        "text": "We use cookies necessary for the operation of the site and, with your consent, audience measurement cookies. You can manage your preferences via the cookie banner and your browser settings."
+      },
+      "rights": {
+        "title": "8. Your Rights",
+        "p1": "In accordance with the GDPR, you have the rights of access, rectification, erasure, restriction, objection and portability. To exercise your rights: {email}.",
+        "p2": "You can also lodge a complaint with your data protection authority."
+      },
+      "security": {
+        "title": "9. Security",
+        "text": "We apply appropriate technical and organizational measures to protect your data against unauthorized access, disclosure, alteration or destruction."
+      },
+      "contact": {
+        "title": "10. Contact",
+        "text": "For any questions about this policy or your personal data: {email}."
+      },
+      "changes": {
+        "title": "11. Changes",
+        "text": "We may update this policy to reflect legal or technical changes. The update date will appear at the top of the page."
+      }
     }
   }
 }

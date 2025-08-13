@@ -182,7 +182,6 @@ export default function Services() {
                 <ServiceCard
                   title={service.title}
                   image={service.image}
-                  description={service.description}
                   onOpenModal={handleOpenModal}
                 />
               </MotionWrapper>
