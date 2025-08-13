@@ -51,7 +51,7 @@
     "diagnostique": "Treasury Diagnosis",
     "gestion": "Liquidity Management",
     "optimisation": "Cost Optimization",
-    "appel": "Call for Tenders",
+    "appel": "Request For Proposal",
     "administratifs": "Administrative Services",
     "support": "Customer Support",
     "solutions": "Technological Solutions",
@@ -63,7 +63,7 @@
   },
   "about": {
     "title": "About Us",
-    "description1": "CM360 is a consulting firm specializing in treasury management optimization, catering to small, medium, and large enterprises, as well as parastatal organizations and NGOs.",
+    "description1": "CM360 is a consulting firm specializing in treasury management optimization, catering to small, medium, and large enterprises, as well as para-governmental organizations and NGOs.",
     "description2": "CM360 also provides consulting and support services to treasury management teams of financial institutions.",
     "expertiseTitle": "Our Expertise",
     "expertiseDescription": "With nearly 15 years of cumulative experience in corporate treasury management, our team of experts supports you in optimizing your treasury management practices through a 360-degree analysis approach. This includes receivables, payables, treasury management systems (TMS), investment, risk management, procedures, compliance, fee structure, and best practices.",
@@ -142,8 +142,8 @@
       ]
     },
     "Appel d'offres": {
-      "title": "Call for Tenders",
-      "description": "Specialized expertise to support companies in drafting tenders for banking services and to assist treasury management teams of financial institutions in preparing responses to tenders.",
+      "title": "Request For Proposal",
+      "description": "Specialized expertise to support companies in drafting requests for proposals for banking services and to assist treasury management teams of financial institutions in preparing responses to requests for proposals.",
       "details": [
         "Diagnosis and mapping of current services",
         "Identification of the company's exact needs",
@@ -195,18 +195,18 @@
     },
     "Solutions technologiques": {
       "title": "Technological Solutions",
-      "description": "Providing tailor-made technological solutions adapted to the specific needs of each client.",
+      "description": "En construction....",
       "details": [
-        "In-depth needs analysis",
-        "Design of personalized solutions",
-        "Strategy implementation",
-        "Continuous monitoring and optimization"
+        "En construction....",
+        "En construction....",
+        "En construction....",
+        "En construction...."
       ],
       "advantages": [
-        "Tailor-made approach",
-        "Adapted results",
-        "Flexibility and innovation",
-        "Dedicated support"
+        "En construction....",
+        "En construction....",
+        "En construction....",
+        "En construction...."
       ]
     }
   },
@@ -218,7 +218,7 @@
   "stats": {
     "experience": "Years of experience",
     "clients": "Clients supported",
-    "satisfaction": "Satisfaction rate achieved"
+    "satisfaction": "Satisfaction rate target"
   },
   "testimonials": {
     "title": "Testimonials",
