@@ -51,7 +51,7 @@
     "diagnostique": "Treasury Diagnosis",
     "gestion": "Liquidity Management",
     "optimisation": "Cost Optimization",
-    "appel": "Request For Proposal",
+    "appel": "Request For Proposals",
     "administratifs": "Administrative Services",
     "support": "Customer Support",
     "solutions": "Technological Solutions",
@@ -142,7 +142,7 @@
       ]
     },
     "Appel d'offres": {
-      "title": "Request For Proposal",
+      "title": "Request For Proposals",
       "description": "Specialized expertise to support companies in drafting requests for proposals for banking services and to assist treasury management teams of financial institutions in preparing responses to requests for proposals.",
       "details": [
         "Diagnosis and mapping of current services",
