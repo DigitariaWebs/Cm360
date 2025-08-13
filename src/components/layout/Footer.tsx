@@ -91,14 +91,6 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} {t('footer.copyright')}
             </div>
             <div className="text-right">
-              <a href="#" className="text-xs text-gray-400 hover:text-white transition duration-300 cursor-pointer">
-                {t('footer.mentions')}
-              </a>{' '}
-              ·{' '}
-              <a href="#" className="text-xs text-gray-400 hover:text-white transition duration-300 cursor-pointer">
-                {t('footer.cgv')}
-              </a>{' '}
-              ·{' '}
               <a href="/privacy" className="text-xs text-gray-400 hover:text-white transition duration-300 cursor-pointer">
                 {t('footer.privacy')}
               </a>
