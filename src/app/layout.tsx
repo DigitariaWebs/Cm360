@@ -18,19 +18,23 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'Cm360 | Conseil en Gestion de Trésorerie d&apos;Entreprise',
-  description: 'Cm360 - Solutions sur mesure pour une gestion stratégique de votre trésorerie et une maximisation de votre liquidité.',
-}
+  title: "Cm360 | Conseil en Gestion de Trésorerie d&apos;Entreprise",
+  description:
+    "Cm360 - Solutions sur mesure pour une gestion stratégique de votre trésorerie et une maximisation de votre liquidité.",
+  icons: {
+    icon: "/logos/favIcon.png",
+  },
+};
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className={`${playfair.variable} ${montserrat.variable}`}>
       <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="icon" href="/logos/favIcon.png" />
       </head>
       <body>
         <I18nProvider initialLanguage="fr" messages={{ en, fr }}>
@@ -38,5 +42,5 @@ export default function RootLayout({
         </I18nProvider>
       </body>
     </html>
-  )
+  );
 }
