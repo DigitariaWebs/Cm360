@@ -54,7 +54,7 @@ export default function Footer({ onServiceClick }: FooterProps) {
           <div>
             <h3 className="text-xl font-serif font-bold mb-4 flex items-center gap-3">
               <Image
-                src={getFooterLogoPath(language)}
+                    src={getFooterLogoPath(language)}
                 alt="CM360 Logo"
                 className="h-16 w-auto"
                 width={200}
