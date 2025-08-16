@@ -73,7 +73,8 @@ export default function Header() {
             <LanguageSwitcher />
           </div>
         </div>
-        <div className="md:hidden ml-4">
+        <div className="md:hidden ml-4 flex items-center space-x-3">
+          <LanguageSwitcher />
           <button
             aria-label="Ouvrir le menu mobile"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
