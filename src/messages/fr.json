@@ -51,7 +51,7 @@
     "diagnostique": "Diagnostique de Trésorerie",
     "gestion": "Gestion de liquidité",
     "optimisation": "Optimisation des coûts",
-    "appel": "Appel d'offres",
+    "appels": "Appels d'offres",
     "administratifs": "Services administratifs",
     "support": "Support Client",
     "solutions": "Solutions technologiques",
@@ -61,8 +61,8 @@
   },
   "about": {
     "title": "À Propos de Nous",
-    "description1": "CM360 est un cabinet de conseil expert en optimisation de la gestion de trésorerie, s'adressant aux petites, moyennes et grandes entreprises, ainsi qu'aux organisations paragouvernementales et aux OBNL.",
-    "description2": "CM360 offre également des services de conseil et de soutien aux équipes de gestion de trésorerie des institutions financières.",
+    "description1": "CM360 est un cabinet de conseil expert en optimisation de gestion de trésorerie, s'adressant aux petites, moyennes et grandes entreprises, ainsi qu'aux organisations paragouvernementales et aux OBNL.",
+    "description2": "CM360 offre également des services de conseil et de soutien aux équipes commerciales de gestion de trésorerie des institutions financières.",
     "expertiseTitle": "Notre Expertise",
     "expertiseDescription": "Forte de près de 15 ans d'expérience cumulée en gestion de trésorerie en entreprise, notre équipe d'experts vous accompagne dans l'optimisation de vos pratiques de gestion de trésorerie grâce à une approche d'analyse à 360 degrés. Celle-ci couvre notamment les volets suivants : recevables, payables, systèmes de gestion de trésorerie (TMS), investissement, gestion des risques, procédures, conformité, structure des frais et meilleures pratiques.",
     "bullet1": "Approche personnalisée pour chaque client",
@@ -144,8 +144,8 @@
         "Réduction du risque"
       ]
     },
-    "Appel d'offres": {
-      "title": "Appel d'offres",
+    "Appels d'offres": {
+      "title": "Appels d'offres",
       "description": "Expertise spécialisée pour accompagner les entreprises dans la rédaction d'appels d'offres pour les services bancaires et pour soutenir les équipes de gestion de trésorerie des institutions financières dans l'élaboration des réponses aux appels d'offres.",
       "details": [
         "Diagnostique et cartographie des services actuels",

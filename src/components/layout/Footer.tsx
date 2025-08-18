@@ -10,7 +10,7 @@ const getServiceTitleFromKey = (key: string): string => {
     diagnostique: "Diagnostique de Trésorerie",
     gestion: "Gestion de liquidité",
     optimisation: "Optimisation des coûts",
-    appel: "Appel d'offres",
+    appels: "Appels d'offres",
     administratifs: "Services administratifs",
     support: "Support Client",
     solutions: "Solutions technologiques",
@@ -54,7 +54,7 @@ export default function Footer({ onServiceClick }: FooterProps) {
           <div>
             <h3 className="text-xl font-serif font-bold mb-4 flex items-center gap-3">
               <Image
-                    src={getFooterLogoPath(language)}
+                src={getFooterLogoPath(language)}
                 alt="CM360 Logo"
                 className="h-16 w-auto"
                 width={200}
@@ -139,10 +139,10 @@ export default function Footer({ onServiceClick }: FooterProps) {
               </li>
               <li>
                 <button
-                  onClick={() => handleServiceClick("appel")}
+                  onClick={() => handleServiceClick("appels")}
                   className="text-gray-300 hover:text-white transition duration-300 cursor-pointer"
                 >
-                  {t("footer.appel")}
+                  {t("footer.appels")}
                 </button>
               </li>
               <li>

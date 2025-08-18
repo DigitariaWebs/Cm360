@@ -7,7 +7,7 @@
   },
   "contact": {
     "title": "Contact Us",
-    "description": "We are at your disposal to discuss your treasury management needs and propose tailored solutions.",
+    "description": "We are at your disposal to discuss your cash management needs and propose tailored solutions.",
     "regions": {
       "title": "Regions Served",
       "northAmerica": "North America",
@@ -45,13 +45,13 @@
     "errorUnknown": "Unknown error"
   },
   "footer": {
-    "description": "Specialized consulting firm in corporate treasury optimization.",
+    "description": "Specialized consulting firm in corporate cash management optimization.",
     "navigation": "Navigation",
     "services": "Services",
-    "diagnostique": "Treasury Diagnosis",
+    "diagnostique": "cash Diagnosis",
     "gestion": "Liquidity Management",
     "optimisation": "Cost Optimization",
-    "appel": "Request For Proposals",
+    "appels": "Requests For Proposals",
     "administratifs": "Administrative Services",
     "support": "Customer Support",
     "solutions": "Technological Solutions",
@@ -61,10 +61,10 @@
   },
   "about": {
     "title": "About Us",
-    "description1": "CM360 is a consulting firm specializing in treasury management optimization, catering to small, medium, and large enterprises, as well as para-governmental organizations and NGOs.",
-    "description2": "CM360 also provides consulting and support services to treasury management teams of financial institutions.",
+    "description1": "CM360 is a consulting firm dedicated to optimizing corporate cash management, supporting small, medium, and large businesses, as well as para-governmental and non-profit organizations.",
+    "description2": "CM360 also provides consulting and support services to commercial and corporate cash management teams of financial institutions.",
     "expertiseTitle": "Our Expertise",
-    "expertiseDescription": "With nearly 15 years of cumulative experience in corporate treasury management, our team of experts supports you in optimizing your treasury management practices through a 360-degree analysis approach. This includes receivables, payables, treasury management systems (TMS), investment, risk management, procedures, compliance, fee structure, and best practices.",
+    "expertiseDescription": "With nearly 15 years of cumulative experience in corporate cash management, our team of experts supports you in optimizing your cash management practices through a 360-degree analysis approach. This includes receivables, payables, cash management systems (TMS), investment, risk management, procedures, compliance, fee structure, and best practices.",
     "bullet1": "Personalized approach for each client",
     "bullet2": "Recognized expertise and experience across various industries and companies of different sizes.",
     "bullet3": "Innovative and regulation-compliant solutions",
@@ -74,18 +74,18 @@
   },
   "hero": {
     "titleHighlight": "Optimization",
-    "title": "of Corporate Treasury",
-    "subtitle": "Optimize your corporate treasury management with our specialized expertise",
+    "title": "of Corporate cash",
+    "subtitle": "Optimize your corporate cash management with our specialized expertise",
     "contactBtn": "Contact Us",
     "servicesBtn": "Our Services"
   },
   "services": {
     "sectionTitle": "Our Services",
-    "sectionDescription": "A complete range of services to meet all your treasury management needs.",
+    "sectionDescription": "A complete range of services to meet all your cash management needs.",
     "contactExpertBtn": "Contact an expert",
     "Diagnostique de Trésorerie": {
-      "title": "Treasury Diagnosis",
-      "description": "In-depth treasury diagnosis, analysis of all your operations to identify inefficiencies and improvement opportunities.",
+      "title": "cash Diagnosis",
+      "description": "In-depth cash diagnosis, analysis of all your operations to identify inefficiencies and improvement opportunities.",
       "details": [
         "Payables diagnosis",
         "Receivables diagnosis",
@@ -96,7 +96,7 @@
         "Risk analysis"
       ],
       "advantages": [
-        "Clear vision of your treasury management",
+        "Clear vision of your cash management",
         "Identification of potential savings",
         "Identification of inefficiency areas",
         "Identification of automation and process improvement opportunities",
@@ -124,7 +124,7 @@
     },
     "Optimisation des coûts": {
       "title": "Cost Optimization",
-      "description": "With our deep experience of banks and their pricing models, we help you reduce banking fees, optimize interest income, and simplify treasury management.",
+      "description": "With our deep experience of banks and their pricing models, we help you reduce banking fees, optimize interest income, and simplify cash management.",
       "details": [
         "Fee optimization",
         "System optimization",
@@ -134,18 +134,18 @@
         "Review of banking agreements and more advantageous service fees",
         "Consolidation of accounts and banking relationships",
         "Automation of payables and receivables",
-        "Treasury management system optimization",
+        "cash management system optimization",
         "Automation and reduction of manual and repetitive operations",
         "Risk reduction"
       ]
     },
-    "Appel d'offres": {
-      "title": "Request For Proposals",
-      "description": "Specialized expertise to support companies in drafting requests for proposals for banking services and to assist treasury management teams of financial institutions in preparing responses to requests for proposals.",
+    "Appels d'offres": {
+      "title": "Requests For Proposals",
+      "description": "Specialized expertise to support companies in drafting requests for proposals for banking services and to assist cash management teams of financial institutions in preparing responses to requests for proposals.",
       "details": [
         "Diagnosis and mapping of current services",
         "Identification of the company's exact needs",
-        "Mapping of structure and identification of future treasury management services",
+        "Mapping of structure and identification of future cash management services",
         "Establishment of evaluation criteria for RFP responses",
         "Preparation of specifications",
         "Support for financial institutions in preparing RFP responses"
@@ -178,15 +178,15 @@
     },
     "Support Client": {
       "title": "Customer Support",
-      "description": "Dedicated training sessions for introduction to treasury management and sharing best practices, while providing ongoing support to our clients.",
+      "description": "Dedicated training sessions for introduction to cash management and sharing best practices, while providing ongoing support to our clients.",
       "details": [
-        "Training of new employees regarding treasury management products and services",
-        "Best practices sharing session in treasury management",
-        "Support for selection and implementation of a treasury management system"
+        "Training of new employees regarding cash management products and services",
+        "Best practices sharing session in cash management",
+        "Support for selection and implementation of a cash management system"
       ],
       "advantages": [
         "Time saving",
-        "Employees better equipped in treasury management",
+        "Employees better equipped in cash management",
         "Efficiency gain by allocating employees to other tasks",
         "Reduction of error risk in overall operations"
       ]
@@ -229,7 +229,7 @@
     "1": {
       "name": "Sophie L.",
       "role": "Deputy CEO - CAC40 Company",
-      "text": "Their expertise in international cash pooling transformed our treasury management, with substantial savings on our financial costs."
+      "text": "Their expertise in international cash pooling transformed our cash management, with substantial savings on our financial costs."
     },
     "2": {
       "name": "Jean-Marc R.",

@@ -76,7 +76,7 @@ const Services = forwardRef<ServicesRef>((props, ref) => {
       ],
     },
     {
-      title: "Appel d'offres",
+      title: "Appels d'offres",
       image: "/AppelOffres.jpg",
       description:
         "Expertise spécialisée pour accompagner les entreprises dans la rédaction d'appels d'offres pour les services bancaires et pour soutenir les équipes de gestion de trésorerie des institutions financières dans l'élaboration des réponses aux appels d'offres.",
