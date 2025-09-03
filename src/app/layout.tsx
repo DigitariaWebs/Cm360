@@ -18,7 +18,7 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "CM360 | Conseil en Gestion de Trésorerie d&apos;Entreprise",
+  title: "CM360 | Conseil en Gestion de Trésorerie d'Entreprise",
   description:
     "CM360 - Solutions sur mesure pour une gestion stratégique de votre trésorerie et une maximisation de votre liquidité.",
   keywords: [
