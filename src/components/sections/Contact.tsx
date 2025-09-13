@@ -108,10 +108,10 @@ export default function Contact() {
                 <div className="ml-4">
                   <h4 className="font-serif font-medium text-darkgreen">{t('contact.phone.title')}</h4>
                   <a
-                    href="tel:+14385213151"
+                    href="tel:+14383679200"
                     className="text-gray-600 hover:text-gold transition"
                   >
-                    +1 438-521-3151
+                    +1 438-367-9200
                   </a>
                 </div>
               </div>
